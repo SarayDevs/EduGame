@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://fipkohy1xiow"]
+
+[ext_resource type="Texture2D" uid="uid://dcjp05rreu4td" path="res://Home/fondos .png" id="1_464ot"]
+[ext_resource type="Script" path="res://Scripts/Creditos.gd" id="1_n4vdh"]
+[ext_resource type="Texture2D" uid="uid://r4keolbrwggl" path="res://Perfiles/icons9.png" id="2_b5e41"]
+[ext_resource type="Texture2D" uid="uid://t74tmydmayor" path="res://Perfiles/iconback_pressed.png" id="3_uatbw"]
+[ext_resource type="FontFile" uid="uid://w86msflfrqa7" path="res://TEMA Y FUENTE/PixelifySans-VariableFont_wght.ttf" id="4_lpm4w"]
+[ext_resource type="Texture2D" uid="uid://dtxe6456eyhs8" path="res://Logros/contenedorcr�ditos.png" id="5_p7jk6"]
+[ext_resource type="FontFile" uid="uid://cqnvnclwrkga5" path="res://TEMA Y FUENTE/RobotoMono-VariableFont_wght.ttf" id="6_xnqj7"]
+[ext_resource type="AudioStream" uid="uid://bfembxxbfkcat" path="res://Sonidos/Music/8-bit RPG Music _ Village Theme (128 kbps).mp3" id="8_r6gq5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wufph"]
+font = ExtResource("4_lpm4w")
+font_size = 100
+font_color = Color(0.584314, 0.321569, 0.501961, 1)
+outline_size = 3
+outline_color = Color(0.133333, 0.12549, 0.203922, 1)
+shadow_size = 4
+shadow_color = Color(0.133333, 0.12549, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7d26p"]
+line_spacing = 4.0
+font = ExtResource("6_xnqj7")
+font_size = 17
+font_color = Color(0.133333, 0.12549, 0.203922, 1)
+outline_size = 1
+outline_color = Color(0.584314, 0.321569, 0.501961, 1)
+shadow_color = Color(0.584314, 0.321569, 0.501961, 1)
+
+[node name="Créditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n4vdh")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(573, 324)
+scale = Vector2(4.20971, 4.2402)
+texture = ExtResource("1_464ot")
+
+[node name="Volver Home" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 70.0
+offset_bottom = 58.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("2_b5e41")
+texture_pressed = ExtResource("3_uatbw")
+
+[node name="TitleScreen" type="Label" parent="."]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 2.0
+offset_right = 789.0
+offset_bottom = 122.0
+text = "Créditos"
+label_settings = SubResource("LabelSettings_wufph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Contenedor" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(563, 342)
+scale = Vector2(2.81451, 3.01975)
+texture = ExtResource("5_p7jk6")
+
+[node name="Label" type="Label" parent="VBoxContainer/Contenedor"]
+offset_left = -119.026
+offset_top = -61.2633
+offset_right = 360.974
+offset_bottom = 231.737
+scale = Vector2(0.5, 0.5)
+text = "Agradecimientos
+Agradecemos profundamente al SENA por el apoyo
+y los recursos brindados, que fueron funda - 
+mentales para el desarrollo de este proyecto.
+
+Equipo de desarrollo:
+Diseño: Maria José Torres
+Desarrolladoras: Zharick M. Pallares y Saray J.
+Garcés 
+
+
+"
+label_settings = SubResource("LabelSettings_7d26p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_r6gq5")
+volume_db = -29.715
+
+[connection signal="pressed" from="Volver Home" to="." method="_on_volver_home_pressed"]

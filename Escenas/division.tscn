@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://4oeygcwu28g"]
+
+[ext_resource type="Script" path="res://scrips/LINEACONTROL.gd" id="1_2w275"]
+
+[node name="division" type="Node2D"]
+script = ExtResource("1_2w275")
+
+[connection signal="divisiones_actualizadas" from="." to="." method="_on_divisiones_actualizadas"]

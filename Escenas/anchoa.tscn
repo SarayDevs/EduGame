@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://wfhau7vsaybq"]
+
+[ext_resource type="Script" path="res://scrips/ingrediente1.gd" id="1_jqo2u"]
+[ext_resource type="Texture2D" uid="uid://bbd5ali8w42e7" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/anchoa1.png" id="2_tfams"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1my7k"]
+size = Vector2(27.452, 26.701)
+
+[node name="anchoa" type="Area2D" groups=["anchoa", "ingredientes"]]
+position = Vector2(261, 105)
+scale = Vector2(1.34781, 1.46062)
+script = ExtResource("1_jqo2u")
+
+[node name="anchoa" type="Sprite2D" parent="."]
+position = Vector2(0.741944, -0.684641)
+scale = Vector2(3.23682, 3.18514)
+texture = ExtResource("2_tfams")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.370972, -0.342316)
+shape = SubResource("RectangleShape2D_1my7k")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

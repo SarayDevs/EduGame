@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://byts6b2uouwls"]
+
+[ext_resource type="Texture2D" uid="uid://cimp3jt8fi1if" path="res://MARIA JOSÉ ASSETS/1ACTIVIDAD/PizzaQuesoSalsaVacia.png" id="1_py485"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ckvl"]
+radius = 175.011
+
+[node name="pizzaPorcentaje" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.75857, -8.60383)
+scale = Vector2(2.52155, 2.75309)
+texture = ExtResource("1_py485")
+
+[node name="PizzaVacia" type="Area2D" parent="."]
+visible = false
+position = Vector2(-3, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaVacia"]
+visible = false
+position = Vector2(3, 2)
+shape = SubResource("CircleShape2D_7ckvl")

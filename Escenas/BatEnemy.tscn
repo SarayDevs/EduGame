@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://2yur8pj1r7bw"]
+
+[ext_resource type="Script" path="res://scrips/BatEnemy.gd" id="1_cjjt5"]
+[ext_resource type="Texture2D" uid="uid://dby4pga3ccusp" path="res://Rocky Roads/Rocky Roads/Enemies/bat.png" id="1_n2lx4"]
+[ext_resource type="Texture2D" uid="uid://boxsd7i0oi6dp" path="res://Pixel Adventure 1/Free/Main Characters/Desappearing (96x96).png" id="2_mxlqw"]
+[ext_resource type="AudioStream" uid="uid://cfubsp87je1ln" path="res://Sonidos/Auch/Auch Sound Effect (Cockney Wideboy).mp3" id="4_iwftk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3hsw"]
+atlas = ExtResource("2_mxlqw")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c210q"]
+atlas = ExtResource("2_mxlqw")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmfm2"]
+atlas = ExtResource("2_mxlqw")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lafpl"]
+atlas = ExtResource("2_mxlqw")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omysf"]
+atlas = ExtResource("2_mxlqw")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7ill"]
+atlas = ExtResource("1_n2lx4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bjbx"]
+atlas = ExtResource("1_n2lx4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4hf7"]
+atlas = ExtResource("1_n2lx4")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd84b"]
+atlas = ExtResource("1_n2lx4")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3qw65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3hsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c210q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmfm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lafpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omysf")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7ill")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bjbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4hf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd84b")
+}],
+"loop": true,
+"name": &"Volar",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ypwjr"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kg0mu"]
+radius = 7.5
+
+[node name="BatEnemy" type="CharacterBody2D" groups=["enemigo"]]
+script = ExtResource("1_cjjt5")
+
+[node name="BatAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.84375, 0.78125)
+sprite_frames = SubResource("SpriteFrames_3qw65")
+animation = &"Die"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("CircleShape2D_ypwjr")
+
+[node name="daño" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="daño"]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("CircleShape2D_kg0mu")
+
+[node name="Auch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_iwftk")
+
+[connection signal="body_entered" from="daño" to="." method="_on_daño_body_entered"]

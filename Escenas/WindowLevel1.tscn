@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bttgelxt770qc"]
+
+[ext_resource type="Script" path="res://scrips/Ventanas.gd" id="1_op1rx"]
+[ext_resource type="Texture2D" uid="uid://d22o0syek7jkd" path="res://MARIA JOSÉ ASSETS/Instruccion1.png" id="2_2kf6l"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_op1rx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Window" type="Window" parent="."]
+title = "popup"
+initial_position = 1
+size = Vector2i(646, 371)
+visible = false
+borderless = true
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Window/Camera2D"]
+texture = ExtResource("2_2kf6l")

@@ -1,0 +1,557 @@
+[gd_scene load_steps=53 format=3 uid="uid://b2ko8et0u0txt"]
+
+[ext_resource type="Script" path="res://Scripts/Home.gd" id="1_hmrfd"]
+[ext_resource type="Texture2D" uid="uid://dcjp05rreu4td" path="res://Home/fondos .png" id="2_40x6v"]
+[ext_resource type="Texture2D" uid="uid://vsf686bf4ih8" path="res://Home/FONDO.png" id="2_wiwp3"]
+[ext_resource type="Texture2D" uid="uid://c5lgdvmj8s1mt" path="res://Home/boton1.png" id="4_aea6g"]
+[ext_resource type="Texture2D" uid="uid://cikdwvcxgc01v" path="res://Home/NEWfondo.png" id="4_ag0y0"]
+[ext_resource type="Texture2D" uid="uid://dnnynndnkmk87" path="res://Home/boton2.png" id="5_qd4mc"]
+[ext_resource type="Texture2D" uid="uid://cnlkbeljfseq4" path="res://Home/textperfiles2.png" id="6_dbjos"]
+[ext_resource type="FontFile" uid="uid://cqnvnclwrkga5" path="res://TEMA Y FUENTE/RobotoMono-VariableFont_wght.ttf" id="7_difu7"]
+[ext_resource type="Texture2D" uid="uid://cmcxlcc6lquvk" path="res://Home/textlogros2.png" id="9_kbx87"]
+[ext_resource type="Texture2D" uid="uid://djanuj2kf2ukb" path="res://Home/textcreditos2.png" id="10_vni2h"]
+[ext_resource type="FontFile" uid="uid://bqtb03dsnrnir" path="res://TEMA Y FUENTE/ka1.ttf" id="12_rww4e"]
+[ext_resource type="Texture2D" uid="uid://cn2juvkce660s" path="res://Home/icons2.png" id="13_ppm7r"]
+[ext_resource type="Texture2D" uid="uid://bubf7nmf4l5rm" path="res://Home/icons2pressed.png" id="14_0v7vb"]
+[ext_resource type="AudioStream" uid="uid://bfembxxbfkcat" path="res://Sonidos/Music/8-bit RPG Music _ Village Theme (128 kbps).mp3" id="14_lnbdq"]
+[ext_resource type="Texture2D" uid="uid://bv7vee6cmhxdn" path="res://Home/icons1.png" id="15_5qwn0"]
+[ext_resource type="Texture2D" uid="uid://3wbe0gt1i3bp" path="res://Home/icon1pressed.png" id="16_gd26o"]
+[ext_resource type="Texture2D" uid="uid://1wwc74yrq3c6" path="res://Carácteres/capibaraCorrer1.png" id="17_lx413"]
+[ext_resource type="Texture2D" uid="uid://c43yu0i2xmmh0" path="res://Carácteres/capibaraCorrer2.png" id="18_hjkq7"]
+[ext_resource type="Texture2D" uid="uid://cx21hgiyy4xrc" path="res://Carácteres/capibaraCorrer3.png" id="19_on1xq"]
+[ext_resource type="Texture2D" uid="uid://ljswhf3lcp2w" path="res://Carácteres/capibaraCorrer4.png" id="20_45y5u"]
+[ext_resource type="Texture2D" uid="uid://devgwleh160ra" path="res://Carácteres/ConejoCorrer1.png" id="21_1jswv"]
+[ext_resource type="Texture2D" uid="uid://2f8h45vxa2c" path="res://Carácteres/ConejoCorrer2.png" id="22_8he4r"]
+[ext_resource type="Texture2D" uid="uid://dtocnb1auabbo" path="res://Carácteres/ConejoCorrer3.png" id="23_4fcgq"]
+[ext_resource type="Texture2D" uid="uid://c6k13ujyfywne" path="res://Carácteres/ConejoCorrer4.png" id="24_05gb0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0elx8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.905882, 0.0784314, 0.192157, 0.301961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vb63k"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b0ry"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y28hm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls0m6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_yue60"]
+Button/colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+Button/colors/font_disabled_color = Color(0.713136, 0.232571, 0.347976, 0.5)
+Button/colors/font_hover_color = Color(0.133333, 0.12549, 0.14902, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.337255, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/font_sizes/font_size = 10
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxFlat_0elx8")
+Button/styles/focus = SubResource("StyleBoxFlat_vb63k")
+Button/styles/hover = SubResource("StyleBoxFlat_1b0ry")
+Button/styles/normal = SubResource("StyleBoxFlat_y28hm")
+Button/styles/pressed = SubResource("StyleBoxFlat_ls0m6")
+Label/fonts/Fuente = null
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcmti"]
+resource_local_to_scene = true
+texture = ExtResource("4_aea6g")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4e5at"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pt11d"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dshx2"]
+texture = ExtResource("6_dbjos")
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkm6t"]
+font = ExtResource("7_difu7")
+font_size = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_838nu"]
+texture = ExtResource("4_aea6g")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndfjl"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_casrh"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qflsd"]
+texture = ExtResource("9_kbx87")
+
+[sub_resource type="LabelSettings" id="LabelSettings_52ue4"]
+font = ExtResource("7_difu7")
+font_size = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvev5"]
+texture = ExtResource("4_aea6g")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyn67"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uk8cp"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sl0iw"]
+texture = ExtResource("10_vni2h")
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6bds"]
+font = ExtResource("7_difu7")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_v47l4"]
+font = ExtResource("12_rww4e")
+font_size = 95
+font_color = Color(0.0926502, 0.0385012, 0.21432, 0.909804)
+
+[sub_resource type="Animation" id="Animation_on87j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("17_lx413")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31, 564)]
+}
+
+[sub_resource type="Animation" id="Animation_vxh0d"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9, 2.1, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.7, 3.9, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("17_lx413"), ExtResource("18_hjkq7"), ExtResource("19_on1xq"), ExtResource("20_45y5u"), ExtResource("17_lx413"), ExtResource("18_hjkq7"), ExtResource("19_on1xq"), ExtResource("20_45y5u"), ExtResource("17_lx413"), ExtResource("18_hjkq7"), ExtResource("19_on1xq"), ExtResource("17_lx413"), ExtResource("20_45y5u"), ExtResource("18_hjkq7"), ExtResource("19_on1xq"), ExtResource("20_45y5u"), ExtResource("17_lx413"), ExtResource("18_hjkq7"), ExtResource("19_on1xq"), ExtResource("20_45y5u"), ExtResource("17_lx413"), ExtResource("19_on1xq"), ExtResource("20_45y5u")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-31, 564), Vector2(1333, 566)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nk87q"]
+_data = {
+"RESET": SubResource("Animation_on87j"),
+"new_animation": SubResource("Animation_vxh0d")
+}
+
+[sub_resource type="Animation" id="Animation_w2ycm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("21_1jswv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-142, 536)]
+}
+
+[sub_resource type="Animation" id="Animation_na2j3"]
+resource_name = "correConejo"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("21_1jswv"), ExtResource("22_8he4r"), ExtResource("23_4fcgq"), ExtResource("24_05gb0"), ExtResource("21_1jswv"), ExtResource("22_8he4r"), ExtResource("23_4fcgq"), ExtResource("24_05gb0"), ExtResource("23_4fcgq"), ExtResource("21_1jswv"), ExtResource("22_8he4r"), ExtResource("23_4fcgq"), ExtResource("24_05gb0"), ExtResource("21_1jswv"), ExtResource("22_8he4r"), ExtResource("23_4fcgq"), ExtResource("24_05gb0"), ExtResource("23_4fcgq"), ExtResource("22_8he4r"), ExtResource("23_4fcgq"), ExtResource("24_05gb0"), ExtResource("24_05gb0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.1, 0, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-194, 550), Vector2(-272, 550), Vector2(1180, 550)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqnyq"]
+_data = {
+"RESET": SubResource("Animation_w2ycm"),
+"correConejo": SubResource("Animation_na2j3")
+}
+
+[node name="Home" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+script = ExtResource("1_hmrfd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(692, 385)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+position = Vector2(-114, -67)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(577.5, 324.5)
+scale = Vector2(4.49609, 5.00781)
+texture = ExtResource("2_wiwp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578.5, 198.313)
+scale = Vector2(2.26007, 0.701796)
+texture = ExtResource("2_40x6v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(581.5, 359.5)
+scale = Vector2(2.48718, 3.19608)
+texture = ExtResource("4_ag0y0")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1054, 43)
+scale = Vector2(0.559066, 0.496732)
+texture = ExtResource("4_ag0y0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -60.0
+offset_right = -49.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 4.5)
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Perfiles" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_yue60")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcmti")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4e5at")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pt11d")
+clip_text = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Perfiles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.6667
+offset_top = -18.1667
+offset_right = 26.3333
+offset_bottom = 11.8333
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_dshx2")
+label_settings = SubResource("LabelSettings_xkm6t")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Logros" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_yue60")
+theme_override_styles/normal = SubResource("StyleBoxTexture_838nu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ndfjl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_casrh")
+
+[node name="Label" type="Label" parent="VBoxContainer/Logros"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -18.8333
+offset_right = 27.0
+offset_bottom = 11.1667
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_qflsd")
+label_settings = SubResource("LabelSettings_52ue4")
+
+[node name="Créditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_yue60")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mvev5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jyn67")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uk8cp")
+
+[node name="Label" type="Label" parent="VBoxContainer/Créditos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -16.5556
+offset_right = 26.0
+offset_bottom = 10.4444
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_sl0iw")
+label_settings = SubResource("LabelSettings_w6bds")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -172.0
+offset_top = 10.0
+offset_right = -122.0
+offset_bottom = 60.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme = SubResource("Theme_yue60")
+alignment = 1
+
+[node name="Música" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("13_ppm7r")
+texture_pressed = ExtResource("14_0v7vb")
+
+[node name="FX" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_5qwn0")
+texture_pressed = ExtResource("16_gd26o")
+
+[node name="TitleScreen" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -183.0
+offset_right = 290.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EDUGAME"
+label_settings = SubResource("LabelSettings_v47l4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_lnbdq")
+volume_db = -29.715
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Capibara")
+libraries = {
+"": SubResource("AnimationLibrary_nk87q")
+}
+
+[node name="Capibara" type="Sprite2D" parent="."]
+position = Vector2(-31, 564)
+scale = Vector2(6.09375, 6.09375)
+texture = ExtResource("17_lx413")
+
+[node name="Conejo" type="Sprite2D" parent="."]
+position = Vector2(-142, 536)
+scale = Vector2(6.75, 6.64063)
+texture = ExtResource("21_1jswv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Conejo"]
+libraries = {
+"": SubResource("AnimationLibrary_sqnyq")
+}
+
+[connection signal="pressed" from="VBoxContainer/Perfiles" to="." method="_on_perfiles_pressed"]
+[connection signal="pressed" from="VBoxContainer/Logros" to="." method="_on_logros_pressed"]
+[connection signal="pressed" from="VBoxContainer/Créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="HBoxContainer/Música" to="." method="_on_música_pressed"]
+[connection signal="pressed" from="HBoxContainer/FX" to="." method="_on_fx_pressed"]

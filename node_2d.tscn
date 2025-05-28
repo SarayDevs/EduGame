@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ywd0jtelljgq"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_4ewbo"]
+[ext_resource type="Texture2D" uid="uid://6idc624e8v5w" path="res://MARIA JOSÉ ASSETS/1ACTIVIDAD/Pizza8porciones1.png" id="2_pl2gq"]
+[ext_resource type="Script" path="res://PizzaSlice.gd" id="3_intjv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4ewbo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pl2gq")
+
+[node name="PizzaSlice" type="Polygon2D" parent="."]
+script = ExtResource("3_intjv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PizzaSlice"]
+
+[node name="PizzaSlice2" type="Polygon2D" parent="."]
+script = ExtResource("3_intjv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PizzaSlice2"]
+
+[node name="PizzaSlice3" type="Polygon2D" parent="."]
+script = ExtResource("3_intjv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PizzaSlice3"]
+
+[node name="PizzaSlice4" type="Polygon2D" parent="."]
+script = ExtResource("3_intjv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PizzaSlice4"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ebkggefdpv5j"]
+
+[ext_resource type="Script" path="res://scrips/ingrediente1.gd" id="1_n5fe5"]
+[ext_resource type="Texture2D" uid="uid://bba0e2krk6nac" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/queso1.png" id="2_vbbk3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_keogu"]
+size = Vector2(29, 29)
+
+[node name="queso" type="Area2D" groups=["queso"]]
+position = Vector2(31.8886, 27.8449)
+script = ExtResource("1_n5fe5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.52172, 4.51394)
+texture = ExtResource("2_vbbk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.3886, -2.3449)
+shape = SubResource("RectangleShape2D_keogu")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

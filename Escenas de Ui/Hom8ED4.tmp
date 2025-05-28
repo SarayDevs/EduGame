@@ -1,0 +1,296 @@
+[gd_scene load_steps=34 format=3 uid="uid://b2ko8et0u0txt"]
+
+[ext_resource type="Script" path="res://Scripts/Home.gd" id="1_hmrfd"]
+[ext_resource type="Texture2D" uid="uid://dcjp05rreu4td" path="res://Home/fondos .png" id="2_40x6v"]
+[ext_resource type="Theme" uid="uid://jvw6yg5c2ln7" path="res://TEMA Y FUENTE/TEMAGUI.tres" id="3_cbg5n"]
+[ext_resource type="Texture2D" uid="uid://c5lgdvmj8s1mt" path="res://Home/botón1.png" id="4_aea6g"]
+[ext_resource type="Texture2D" uid="uid://dnnynndnkmk87" path="res://Home/botón2.png" id="5_qd4mc"]
+[ext_resource type="Texture2D" uid="uid://cnlkbeljfseq4" path="res://Home/textperfiles2.png" id="6_dbjos"]
+[ext_resource type="FontFile" uid="uid://cqnvnclwrkga5" path="res://TEMA Y FUENTE/RobotoMono-VariableFont_wght.ttf" id="7_difu7"]
+[ext_resource type="Script" path="res://Scripts/Label.gd" id="8_r4i5y"]
+[ext_resource type="Texture2D" uid="uid://cmcxlcc6lquvk" path="res://Home/textlogros2.png" id="9_kbx87"]
+[ext_resource type="Script" path="res://Scripts/Label2.gd" id="10_le8ar"]
+[ext_resource type="Texture2D" uid="uid://djanuj2kf2ukb" path="res://Home/textcreditos2.png" id="10_vni2h"]
+[ext_resource type="Script" path="res://Scripts/Label3.gd" id="12_i2obx"]
+[ext_resource type="FontFile" uid="uid://bqtb03dsnrnir" path="res://TEMA Y FUENTE/ka1.ttf" id="12_rww4e"]
+[ext_resource type="Texture2D" uid="uid://cn2juvkce660s" path="res://Home/icons2.png" id="13_ppm7r"]
+[ext_resource type="Texture2D" uid="uid://bubf7nmf4l5rm" path="res://Home/icons2pressed.png" id="14_0v7vb"]
+[ext_resource type="Texture2D" uid="uid://bv7vee6cmhxdn" path="res://Home/icons1.png" id="15_5qwn0"]
+[ext_resource type="Texture2D" uid="uid://3wbe0gt1i3bp" path="res://Home/icon1pressed.png" id="16_gd26o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcmti"]
+resource_local_to_scene = true
+texture = ExtResource("4_aea6g")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4e5at"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pt11d"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dshx2"]
+texture = ExtResource("6_dbjos")
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkm6t"]
+font = ExtResource("7_difu7")
+font_size = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_838nu"]
+texture = ExtResource("4_aea6g")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndfjl"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_casrh"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qflsd"]
+texture = ExtResource("9_kbx87")
+
+[sub_resource type="LabelSettings" id="LabelSettings_52ue4"]
+font = ExtResource("7_difu7")
+font_size = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mvev5"]
+texture = ExtResource("4_aea6g")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyn67"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 1.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uk8cp"]
+texture = ExtResource("5_qd4mc")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 1.0
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sl0iw"]
+texture = ExtResource("10_vni2h")
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6bds"]
+font = ExtResource("7_difu7")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_v47l4"]
+font = ExtResource("12_rww4e")
+font_size = 95
+font_color = Color(0.0926502, 0.0385012, 0.21432, 0.909804)
+
+[node name="Home" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+script = ExtResource("1_hmrfd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(692, 385)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+position = Vector2(-114, -67)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(462, 312)
+scale = Vector2(6.11722, 5.38235)
+texture = ExtResource("2_40x6v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -60.0
+offset_right = -49.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 4.5)
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Perfiles" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("3_cbg5n")
+theme_override_font_sizes/font_size = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dcmti")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4e5at")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pt11d")
+clip_text = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Perfiles"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.6667
+offset_top = -18.1667
+offset_right = 26.3333
+offset_bottom = 11.8333
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_dshx2")
+label_settings = SubResource("LabelSettings_xkm6t")
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("8_r4i5y")
+
+[node name="Logros" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_cbg5n")
+theme_override_styles/normal = SubResource("StyleBoxTexture_838nu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ndfjl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_casrh")
+
+[node name="Label" type="Label" parent="VBoxContainer/Logros"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -18.8333
+offset_right = 27.0
+offset_bottom = 11.1667
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_qflsd")
+label_settings = SubResource("LabelSettings_52ue4")
+script = ExtResource("10_le8ar")
+
+[node name="Créditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_cbg5n")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mvev5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jyn67")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uk8cp")
+
+[node name="Label" type="Label" parent="VBoxContainer/Créditos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -16.5556
+offset_right = 26.0
+offset_bottom = 10.4444
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_sl0iw")
+label_settings = SubResource("LabelSettings_w6bds")
+script = ExtResource("12_i2obx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -172.0
+offset_top = 10.0
+offset_right = -122.0
+offset_bottom = 60.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme = ExtResource("3_cbg5n")
+alignment = 1
+
+[node name="Música" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("13_ppm7r")
+texture_pressed = ExtResource("14_0v7vb")
+
+[node name="FX" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("15_5qwn0")
+texture_pressed = ExtResource("16_gd26o")
+
+[node name="TitleScreen" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -183.0
+offset_right = 290.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EDUGAME"
+label_settings = SubResource("LabelSettings_v47l4")
+
+[connection signal="pressed" from="VBoxContainer/Perfiles" to="." method="_on_perfiles_pressed"]
+[connection signal="pressed" from="VBoxContainer/Logros" to="." method="_on_logros_pressed"]
+[connection signal="pressed" from="VBoxContainer/Créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="HBoxContainer/Música" to="." method="_on_música_pressed"]
+[connection signal="pressed" from="HBoxContainer/FX" to="." method="_on_fx_pressed"]

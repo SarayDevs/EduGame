@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctfue1q5k7r56"]
+
+[ext_resource type="Script" path="res://scrips/orden2.gd" id="1_jrlx6"]
+[ext_resource type="Script" path="res://scrips/OrdenPizza.gd" id="2_f1le2"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://DynamicFont/pixelart.ttf" id="3_wfu3h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pyw7l"]
+line_spacing = 100.0
+font = ExtResource("3_wfu3h")
+font_size = 33
+
+[node name="NodoControl" type="Node"]
+script = ExtResource("1_jrlx6")
+
+[node name="OrdenPizza" type="CanvasLayer" parent="."]
+script = ExtResource("2_f1le2")
+
+[node name="Orden" type="Label" parent="OrdenPizza"]
+offset_left = 48.0
+offset_top = 45.0
+offset_right = 180.0
+offset_bottom = 100.0
+text = "Orden:"
+label_settings = SubResource("LabelSettings_pyw7l")
+
+[node name="HBoxIngredientes" type="HBoxContainer" parent="OrdenPizza"]
+offset_left = 195.0
+offset_top = 97.0
+offset_right = 556.0
+offset_bottom = 137.0
+theme_override_constants/separation = 40
+
+[node name="HBoxPorcentajes" type="HBoxContainer" parent="OrdenPizza"]
+offset_left = 195.0
+offset_top = 50.0
+offset_right = 603.0
+offset_bottom = 95.0

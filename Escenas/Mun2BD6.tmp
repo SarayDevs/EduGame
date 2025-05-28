@@ -1,0 +1,195 @@
+[gd_scene load_steps=20 format=3 uid="uid://cy1a7dffjyn13"]
+
+[ext_resource type="Script" path="res://Escenas/Mundo2.gd" id="1_l06hj"]
+[ext_resource type="Texture2D" uid="uid://bfyrumplsmvn7" path="res://Rocky Roads/Rocky Roads/Deco/sky.png" id="2_mvgpx"]
+[ext_resource type="Texture2D" uid="uid://dogqamkv8tbj1" path="res://Rocky Roads/Rocky Roads/Backgrounds/trees.png" id="2_pum0d"]
+[ext_resource type="Texture2D" uid="uid://upm67ubdjq0o" path="res://Rocky Roads/Rocky Roads/Deco/tree.png" id="3_yw72a"]
+[ext_resource type="Texture2D" uid="uid://deb5v6ltkn3ky" path="res://Rocky Roads/Rocky Roads/Deco/tree_b.png" id="4_01vvs"]
+[ext_resource type="Texture2D" uid="uid://xpsgwtqh5ylf" path="res://Rocky Roads/Rocky Roads/Deco/tree_trunk.png" id="5_tiqeu"]
+[ext_resource type="Texture2D" uid="uid://dskefyevkhuhv" path="res://Rocky Roads/Rocky Roads/Deco/rock.png" id="6_lp3dr"]
+[ext_resource type="Texture2D" uid="uid://ccksiqcxaj1ji" path="res://Rocky Roads/Rocky Roads/Deco/bush.png" id="7_bm101"]
+[ext_resource type="Texture2D" uid="uid://cxkt35ut1m87i" path="res://Rocky Roads/Rocky Roads/Backgrounds/grass.png" id="9_euomh"]
+[ext_resource type="Texture2D" uid="uid://bpwd7sn040oyy" path="res://Rocky Roads/Rocky Roads/Objects/sign.png" id="9_vt2bd"]
+[ext_resource type="PackedScene" uid="uid://d1j183s1tcml3" path="res://Escenas/player.tscn" id="10_38po8"]
+[ext_resource type="PackedScene" uid="uid://b1ma1con8rv5d" path="res://reproductor.tscn" id="12_j7yam"]
+[ext_resource type="Script" path="res://Escenas/PantallaMuerte.gd" id="13_20obg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rota"]
+size = Vector2(646, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1v2a5"]
+size = Vector2(46.125, 361)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7onb"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_xlbh5"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_wb5yb"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_1c3wm"]
+font_size = 30
+
+[node name="Mundo2" type="Node2D"]
+position = Vector2(558, 346)
+script = ExtResource("1_l06hj")
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(1.00002, -14.5003)
+scale = Vector2(2.53333, 16.0476)
+texture = ExtResource("2_mvgpx")
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(6.00001, 127.25)
+scale = Vector2(2.57813, 1.07422)
+texture = ExtResource("9_euomh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(14, 146.5)
+shape = SubResource("RectangleShape2D_1rota")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, -158)
+shape = SubResource("RectangleShape2D_1rota")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-296, -4.5)
+shape = SubResource("RectangleShape2D_1v2a5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(302, 2)
+shape = SubResource("RectangleShape2D_1v2a5")
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(2, -44)
+scale = Vector2(2.52783, 1.65137)
+texture = ExtResource("2_pum0d")
+
+[node name="TreeB2" type="Sprite2D" parent="."]
+position = Vector2(-143, 4)
+scale = Vector2(2.46712, 3.12402)
+texture = ExtResource("4_01vvs")
+
+[node name="TreeTrunk" type="Sprite2D" parent="."]
+position = Vector2(109, 79)
+scale = Vector2(2.86914, 1.90332)
+texture = ExtResource("5_tiqeu")
+
+[node name="Rock" type="Sprite2D" parent="."]
+position = Vector2(-139, 118)
+scale = Vector2(2.01953, 2.53125)
+texture = ExtResource("6_lp3dr")
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(214, 87)
+scale = Vector2(2.05908, 1.70313)
+texture = ExtResource("7_bm101")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-277, 104)
+scale = Vector2(3.53125, 3.76188)
+texture = ExtResource("3_yw72a")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(165, 117)
+scale = Vector2(3.60938, 2.47266)
+texture = ExtResource("9_vt2bd")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(172, -7)
+scale = Vector2(3.57292, 4.24316)
+texture = ExtResource("3_yw72a")
+
+[node name="player" parent="." instance=ExtResource("10_38po8")]
+position = Vector2(-3, 32)
+
+[node name="reproductor" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-230, -213)
+
+[node name="reproductor2" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-129, -211)
+
+[node name="reproductor3" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(109, -209)
+
+[node name="reproductor4" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(209, -211)
+
+[node name="reproductor5" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(0, -211)
+
+[node name="TreeB" type="Sprite2D" parent="."]
+position = Vector2(304, 18)
+scale = Vector2(4.875, 5.24219)
+texture = ExtResource("4_01vvs")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2.0
+offset_top = -157.0
+offset_right = 38.0
+offset_bottom = -115.0
+text = "0"
+label_settings = SubResource("LabelSettings_n7onb")
+
+[node name="PantallaMuerte" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("13_20obg")
+
+[node name="Mensaje" type="Label" parent="PantallaMuerte"]
+offset_left = 426.0
+offset_top = 227.0
+offset_right = 729.0
+offset_bottom = 282.0
+size_flags_horizontal = 4
+text = "HAS MUERTO :C"
+label_settings = SubResource("LabelSettings_xlbh5")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaMuerte"]
+offset_left = 485.0
+offset_top = 279.0
+offset_right = 665.0
+offset_bottom = 321.0
+
+[node name="LabelFinal" type="Label" parent="PantallaMuerte/HBoxContainer"]
+layout_mode = 2
+text = "Score final:"
+label_settings = SubResource("LabelSettings_wb5yb")
+
+[node name="FinalScore" type="Label" parent="PantallaMuerte/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_1c3wm")
+
+[node name="Restart" type="Button" parent="PantallaMuerte"]
+offset_left = 444.0
+offset_top = 401.0
+offset_right = 530.0
+offset_bottom = 432.0
+size_flags_vertical = 4
+text = "REINICIAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaMuerte"]
+offset_left = 617.0
+offset_top = 404.0
+offset_right = 669.0
+offset_bottom = 435.0
+size_flags_vertical = 0
+text = "SALIR
+"
+alignment = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -3)
+zoom = Vector2(1.8, 1.8)
+
+[connection signal="pressed" from="PantallaMuerte/Restart" to="PantallaMuerte" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaMuerte/LEFT" to="PantallaMuerte" method="_on_left_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcxh71cev1xe6"]
+
+[ext_resource type="Script" path="res://Escenas/videos3.gd" id="1_tiuo6"]
+[ext_resource type="VideoStream" path="res://videos/Video3.ogv" id="2_daqjd"]
+[ext_resource type="AudioStream" uid="uid://bfembxxbfkcat" path="res://Sonidos/Music/8-bit RPG Music _ Village Theme (128 kbps).mp3" id="3_l66sc"]
+
+[node name="videos3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tiuo6")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_daqjd")
+autoplay = true
+expand = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.5
+offset_right = 20.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Skip"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l66sc")
+volume_db = -28.653
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

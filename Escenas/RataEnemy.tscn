@@ -1,0 +1,105 @@
+[gd_scene load_steps=17 format=3 uid="uid://b8y3hbuf1xuda"]
+
+[ext_resource type="Script" path="res://scrips/RataEnemy2D.gd" id="1_dklri"]
+[ext_resource type="Texture2D" uid="uid://c703bj6xseldh" path="res://Carácteres/Enemies/Mouse1.png" id="2_gd3ia"]
+[ext_resource type="Texture2D" uid="uid://boxsd7i0oi6dp" path="res://Pixel Adventure 1/Free/Main Characters/Desappearing (96x96).png" id="2_mo432"]
+[ext_resource type="Texture2D" uid="uid://c5o0nhp88q3m4" path="res://Carácteres/Enemies/Mouse2.png" id="3_34jr0"]
+[ext_resource type="Texture2D" uid="uid://bcxkueymcxv4b" path="res://Carácteres/Enemies/Mouse3.png" id="4_heev3"]
+[ext_resource type="Texture2D" uid="uid://dmgatdu7e8468" path="res://Carácteres/Enemies/Mouse4.png" id="5_kx8vv"]
+[ext_resource type="Texture2D" uid="uid://0f7f6v0hwxf7" path="res://Carácteres/Enemies/Mouse5.png" id="6_30a3d"]
+[ext_resource type="AudioStream" uid="uid://cfubsp87je1ln" path="res://Sonidos/Auch/Auch Sound Effect (Cockney Wideboy).mp3" id="8_xv2os"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq2vs"]
+atlas = ExtResource("2_mo432")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8rr2"]
+atlas = ExtResource("2_mo432")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6xb1"]
+atlas = ExtResource("2_mo432")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob8fn"]
+atlas = ExtResource("2_mo432")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swicc"]
+atlas = ExtResource("2_mo432")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2eph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq2vs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8rr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6xb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob8fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swicc")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gd3ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_34jr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_heev3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kx8vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_30a3d")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqdrw"]
+size = Vector2(22, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g101w"]
+size = Vector2(17.5694, 15.5)
+
+[node name="Rata" type="CharacterBody2D" groups=["enemigo"]]
+script = ExtResource("1_dklri")
+
+[node name="RataAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i2eph")
+animation = &"Die"
+frame = 4
+frame_progress = 0.407813
+
+[node name="RataCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_uqdrw")
+
+[node name="RataArea2D" type="Area2D" parent="."]
+scale = Vector2(1.14271, 0.963974)
+
+[node name="DañoCollisionShape2D" type="CollisionShape2D" parent="RataArea2D"]
+position = Vector2(-2.08616e-07, -2.25)
+scale = Vector2(1.25218, 1)
+shape = SubResource("RectangleShape2D_g101w")
+
+[node name="Auch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_xv2os")
+
+[connection signal="body_entered" from="RataArea2D" to="." method="_on_rata_area_2d_body_entered"]

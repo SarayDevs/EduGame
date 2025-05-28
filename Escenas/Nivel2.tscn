@@ -1,0 +1,452 @@
+[gd_scene load_steps=39 format=3 uid="uid://c7nkk4w062fs7"]
+
+[ext_resource type="Script" path="res://scrips/Logica del juego.gd" id="1_ewbpw"]
+[ext_resource type="Texture2D" uid="uid://52c7j5f6vx75" path="res://Asset/MesaFondo.png" id="2_chbq0"]
+[ext_resource type="Script" path="res://scrips/Puntos.gd" id="3_yxqb6"]
+[ext_resource type="Script" path="res://scrips/CajasPizza.gd" id="6_m6vgn"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://DynamicFont/pixelart.ttf" id="7_64trn"]
+[ext_resource type="PackedScene" uid="uid://bo4pdioxkvf3m" path="res://Escenas/transCaja2.tscn" id="7_lp8pl"]
+[ext_resource type="PackedScene" uid="uid://bbvt32epf6p0k" path="res://Escenas/transcaja.tscn" id="8_4qjmn"]
+[ext_resource type="Texture2D" uid="uid://bhsdbp86if4xw" path="res://Asset/Special Icons (2).png" id="8_jween"]
+[ext_resource type="Texture2D" uid="uid://cudf5rjhwurd5" path="res://MARIA JOSÉ ASSETS/2ACTIVIDAD/ordenes/CajaPropia.png" id="9_otcyd"]
+[ext_resource type="PackedScene" uid="uid://chje123b8ltcx" path="res://Escenas/Pizzas.tscn" id="10_p5mag"]
+[ext_resource type="Texture2D" uid="uid://dwh0ytubfvuoq" path="res://MARIA JOSÉ ASSETS/2ACTIVIDAD/ordenes/cajaImpropia.png" id="10_x5cpq"]
+[ext_resource type="PackedScene" uid="uid://bwt4d2esdhxro" path="res://Escenas/WindowLevel2.tscn" id="12_4svep"]
+[ext_resource type="Script" path="res://scrips/WindowLevel2.gd" id="13_gbfmu"]
+[ext_resource type="PackedScene" uid="uid://teyoihvsm2pg" path="res://Escenas/gameover.tscn" id="14_xlxgf"]
+[ext_resource type="PackedScene" uid="uid://dvqtuv7jhfi07" path="res://Escenas/win.tscn" id="15_l55vi"]
+[ext_resource type="Script" path="res://scrips/volverJugar.gd" id="16_jdwse"]
+[ext_resource type="FontFile" uid="uid://bu4wj7rpdvt5n" path="res://Fuente/Minecraft.ttf" id="17_iepij"]
+[ext_resource type="Script" path="res://scrips/PantallaGameover.gd" id="18_m0uuc"]
+[ext_resource type="AudioStream" uid="uid://h2vgukqwriw7" path="res://Sonidos/Music/AdhesiveWombat - Night Shade.mp3" id="19_3l04y"]
+[ext_resource type="Script" path="res://scrips/Buttonvideo2.gd" id="20_caopa"]
+[ext_resource type="Texture2D" uid="uid://cn2juvkce660s" path="res://Home/icons2.png" id="21_0m4d0"]
+[ext_resource type="Texture2D" uid="uid://cikdwvcxgc01v" path="res://Home/NEWfondo.png" id="21_fkeh3"]
+[ext_resource type="Texture2D" uid="uid://bubf7nmf4l5rm" path="res://Home/icons2pressed.png" id="22_ek3a4"]
+[ext_resource type="Texture2D" uid="uid://bv7vee6cmhxdn" path="res://Home/icons1.png" id="23_i786x"]
+[ext_resource type="Texture2D" uid="uid://3wbe0gt1i3bp" path="res://Home/icon1pressed.png" id="24_w0bp4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ymfgp"]
+line_spacing = 100.0
+font = ExtResource("7_64trn")
+font_size = 40
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0bfn"]
+size = Vector2(27.4366, 26.0259)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0leck"]
+size = Vector2(25.8852, 25.2694)
+
+[sub_resource type="LabelSettings" id="LabelSettings_71exe"]
+font = ExtResource("17_iepij")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_tr6d4"]
+font = ExtResource("17_iepij")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_vn4kd"]
+font = ExtResource("17_iepij")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbk56"]
+font = ExtResource("17_iepij")
+font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t2e6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.905882, 0.0784314, 0.192157, 0.301961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5mqy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8i31q"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyul5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0hmo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_dkww2"]
+Button/colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+Button/colors/font_disabled_color = Color(0.713136, 0.232571, 0.347976, 0.5)
+Button/colors/font_hover_color = Color(0.133333, 0.12549, 0.14902, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.337255, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/font_sizes/font_size = 10
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxFlat_5t2e6")
+Button/styles/focus = SubResource("StyleBoxFlat_q5mqy")
+Button/styles/hover = SubResource("StyleBoxFlat_8i31q")
+Button/styles/normal = SubResource("StyleBoxFlat_xyul5")
+Button/styles/pressed = SubResource("StyleBoxFlat_v0hmo")
+Label/fonts/Fuente = null
+
+[node name="Nivel2" type="Node"]
+script = ExtResource("1_ewbpw")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(576, 321)
+scale = Vector2(4.20879, 4.22222)
+texture = ExtResource("2_chbq0")
+metadata/_edit_lock_ = true
+
+[node name="Puntos" type="CanvasLayer" parent="."]
+script = ExtResource("3_yxqb6")
+
+[node name="points" type="Label" parent="Puntos"]
+offset_left = 1066.0
+offset_top = 35.0
+offset_right = 1120.0
+offset_bottom = 90.0
+text = "0"
+label_settings = SubResource("LabelSettings_ymfgp")
+
+[node name="Score" type="Label" parent="Puntos"]
+offset_left = 888.0
+offset_top = 24.0
+offset_right = 1107.0
+offset_bottom = 79.0
+text = "Ronda:"
+label_settings = SubResource("LabelSettings_ymfgp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Puntos"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 300.0
+offset_top = 69.0
+offset_right = 516.0
+offset_bottom = 136.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="Puntos/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="Puntos/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella3" type="TextureRect" parent="Puntos/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="rojo" parent="." instance=ExtResource("7_lp8pl")]
+visible = false
+
+[node name="verde" parent="." instance=ExtResource("8_4qjmn")]
+visible = false
+
+[node name="CajaPropia" type="Area2D" parent="." groups=["cajas"]]
+position = Vector2(918, 430)
+scale = Vector2(4.41016, 4.22656)
+script = ExtResource("6_m6vgn")
+
+[node name="CajaPropia" type="Sprite2D" parent="CajaPropia"]
+position = Vector2(-3.85474, -3.31239)
+scale = Vector2(0.870726, 0.87403)
+texture = ExtResource("9_otcyd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaPropia"]
+position = Vector2(1.47391, 0.236649)
+shape = SubResource("RectangleShape2D_s0bfn")
+
+[node name="CajaImpropia" type="Area2D" parent="." groups=["cajas"]]
+position = Vector2(249, 440)
+scale = Vector2(4.55859, 4.23438)
+script = ExtResource("6_m6vgn")
+
+[node name="CajaImpropias" type="Sprite2D" parent="CajaImpropia"]
+position = Vector2(10.0908, -4.25092)
+scale = Vector2(0.849601, 0.87583)
+texture = ExtResource("10_x5cpq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaImpropia"]
+position = Vector2(6.14225, 1.41697)
+shape = SubResource("RectangleShape2D_0leck")
+
+[node name="Pizzas" parent="." groups=["Pizzas"] instance=ExtResource("10_p5mag")]
+position = Vector2(588, 194)
+
+[node name="Node2D" parent="." instance=ExtResource("12_4svep")]
+position = Vector2(575, 320)
+script = ExtResource("13_gbfmu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(13, -54)
+zoom = Vector2(1.3, 1.3)
+
+[node name="gameover" parent="Camera2D" instance=ExtResource("14_xlxgf")]
+visible = false
+
+[node name="WIN" parent="Camera2D" instance=ExtResource("15_l55vi")]
+visible = false
+
+[node name="PantallaGanar" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("16_jdwse")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaGanar"]
+offset_left = 523.0
+offset_top = 39.0
+offset_right = 747.0
+offset_bottom = 81.0
+
+[node name="LabelFinal" type="Label" parent="PantallaGanar/HBoxContainer"]
+layout_mode = 2
+text = "Rondas: 
+"
+label_settings = SubResource("LabelSettings_71exe")
+
+[node name="FinalScore" type="Label" parent="PantallaGanar/HBoxContainer"]
+layout_mode = 2
+text = "0
+"
+label_settings = SubResource("LabelSettings_tr6d4")
+
+[node name="Restart" type="Button" parent="PantallaGanar"]
+offset_left = 223.0
+offset_top = 499.0
+offset_right = 360.0
+offset_bottom = 530.0
+size_flags_vertical = 4
+text = "VOLVER A JUGAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaGanar"]
+offset_left = 827.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 528.0
+size_flags_vertical = 0
+text = "CONTINUAR
+"
+alignment = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PantallaGanar"]
+offset_left = 470.0
+offset_top = 80.0
+offset_right = 1013.0
+offset_bottom = 190.0
+scale = Vector2(0.785368, 0.758043)
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="PantallaGanar/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="PantallaGanar/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+
+[node name="estrella3" type="TextureRect" parent="PantallaGanar/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+
+[node name="PantallaPerder" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("18_m0uuc")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PantallaPerder"]
+offset_left = 470.0
+offset_top = 80.0
+offset_right = 1013.0
+offset_bottom = 190.0
+scale = Vector2(0.785368, 0.758043)
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="PantallaPerder/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="PantallaPerder/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+
+[node name="estrella3" type="TextureRect" parent="PantallaPerder/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaPerder"]
+offset_left = 521.0
+offset_top = 34.0
+offset_right = 758.0
+offset_bottom = 76.0
+
+[node name="LabelFinal" type="Label" parent="PantallaPerder/HBoxContainer"]
+layout_mode = 2
+text = "Rondas: "
+label_settings = SubResource("LabelSettings_vn4kd")
+
+[node name="FinalScore" type="Label" parent="PantallaPerder/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_pbk56")
+
+[node name="Restart" type="Button" parent="PantallaPerder"]
+offset_left = 223.0
+offset_top = 499.0
+offset_right = 360.0
+offset_bottom = 530.0
+size_flags_vertical = 4
+text = "VOLVER A JUGAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaPerder"]
+offset_left = 827.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 528.0
+size_flags_vertical = 0
+text = "SALIR
+"
+alignment = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_3l04y")
+volume_db = -22.847
+pitch_scale = 0.83
+
+[node name="VerVideo" type="Button" parent="."]
+offset_left = 21.0
+offset_top = 557.0
+offset_right = 73.0
+offset_bottom = 588.0
+text = "Video
+"
+script = ExtResource("20_caopa")
+
+[node name="inicio2" type="Button" parent="."]
+offset_left = 21.0
+offset_top = 602.0
+offset_right = 71.0
+offset_bottom = 633.0
+text = "inicio"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -427.0
+offset_top = 14.0
+offset_right = -377.0
+offset_bottom = 38.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme = SubResource("Theme_dkww2")
+alignment = 1
+
+[node name="Sprite2D4" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(24.5633, 11)
+scale = Vector2(0.186355, 0.165577)
+texture = ExtResource("21_fkeh3")
+
+[node name="Música" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("21_0m4d0")
+texture_pressed = ExtResource("22_ek3a4")
+
+[node name="FX" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("23_i786x")
+texture_pressed = ExtResource("24_w0bp4")
+
+[connection signal="perderEstrella" from="." to="Puntos" method="_on_nivel_2_perder_estrella"]
+[connection signal="perderEstrella" from="." to="PantallaGanar" method="_on_nivel_2_perder_estrella"]
+[connection signal="perderEstrella" from="." to="PantallaPerder" method="_on_nivel_2_perder_estrella"]
+[connection signal="area_entered" from="CajaPropia" to="CajaPropia" method="_on_area_entered"]
+[connection signal="area_entered" from="CajaImpropia" to="CajaImpropia" method="_on_area_entered"]
+[connection signal="pizza_colocada" from="Pizzas" to="CajaPropia" method="_on_pizzas_pizza_colocada"]
+[connection signal="pressed" from="PantallaGanar/Restart" to="PantallaGanar" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaGanar/LEFT" to="PantallaGanar" method="_on_left_pressed"]
+[connection signal="pressed" from="PantallaPerder/Restart" to="PantallaPerder" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaPerder/LEFT" to="PantallaPerder" method="_on_left_pressed"]
+[connection signal="pressed" from="VerVideo" to="VerVideo" method="_on_pressed"]
+[connection signal="pressed" from="inicio2" to="." method="_on_inicio_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Música" to="." method="_on_música_pressed"]

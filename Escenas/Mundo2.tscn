@@ -1,0 +1,743 @@
+[gd_scene load_steps=52 format=3 uid="uid://cy1a7dffjyn13"]
+
+[ext_resource type="Script" path="res://scrips/Mundo2.gd" id="1_l06hj"]
+[ext_resource type="Texture2D" uid="uid://bfyrumplsmvn7" path="res://Rocky Roads/Rocky Roads/Deco/sky.png" id="2_mvgpx"]
+[ext_resource type="Texture2D" uid="uid://0lgcnbfsrwan" path="res://Rocky Roads/Rocky Roads/Backgrounds/mountains_a.png" id="3_21bhx"]
+[ext_resource type="Texture2D" uid="uid://usmjj3b1didw" path="res://Rocky Roads/Rocky Roads/Enemies/spikes.png" id="4_u18x1"]
+[ext_resource type="Texture2D" uid="uid://ccdw855nnfs3k" path="res://Kings and Pigs/Sprites/14-TileSets/Decorations (32x32).png" id="5_q1qo6"]
+[ext_resource type="Texture2D" uid="uid://c8ykwbp43oiax" path="res://Rocky Roads/Rocky Roads/Deco/clouds.png" id="5_rirkw"]
+[ext_resource type="Texture2D" uid="uid://cgne7mecvh3ql" path="res://Kings and Pigs/Sprites/14-TileSets/Terrain (32x32).png" id="6_hn4i4"]
+[ext_resource type="Texture2D" uid="uid://c0jpj2gvf1y1m" path="res://Rocky Roads/Rocky Roads/Deco/sun.png" id="6_tjaeu"]
+[ext_resource type="PackedScene" uid="uid://dvqtuv7jhfi07" path="res://Escenas/win.tscn" id="10_uer4w"]
+[ext_resource type="PackedScene" uid="uid://teyoihvsm2pg" path="res://Escenas/gameover.tscn" id="11_ds28l"]
+[ext_resource type="PackedScene" uid="uid://b1ma1con8rv5d" path="res://Escenas/reproductor.tscn" id="12_j7yam"]
+[ext_resource type="Script" path="res://scrips/volverJugar3.gd" id="12_xkx81"]
+[ext_resource type="FontFile" uid="uid://bu4wj7rpdvt5n" path="res://Fuente/Minecraft.ttf" id="13_cn4kl"]
+[ext_resource type="Script" path="res://Escenas/PantallaMundo2.gd" id="13_y4w5q"]
+[ext_resource type="Texture2D" uid="uid://cxkt35ut1m87i" path="res://Rocky Roads/Rocky Roads/Backgrounds/grass.png" id="15_nltry"]
+[ext_resource type="Texture2D" uid="uid://dogqamkv8tbj1" path="res://Rocky Roads/Rocky Roads/Backgrounds/trees.png" id="16_x3meq"]
+[ext_resource type="Texture2D" uid="uid://upm67ubdjq0o" path="res://Rocky Roads/Rocky Roads/Deco/tree.png" id="17_0mol0"]
+[ext_resource type="Texture2D" uid="uid://deb5v6ltkn3ky" path="res://Rocky Roads/Rocky Roads/Deco/tree_b.png" id="18_np4id"]
+[ext_resource type="Texture2D" uid="uid://xpsgwtqh5ylf" path="res://Rocky Roads/Rocky Roads/Deco/tree_trunk.png" id="19_0dqko"]
+[ext_resource type="Texture2D" uid="uid://xc4gurg3g72j" path="res://Rocky Roads/Rocky Roads/Enemies/wood_stakes.png" id="20_d1xol"]
+[ext_resource type="Texture2D" uid="uid://be4hi0glsasmi" path="res://Rocky Roads/Rocky Roads/Objects/apple.png" id="22_tlfdp"]
+[ext_resource type="Texture2D" uid="uid://ccksiqcxaj1ji" path="res://Rocky Roads/Rocky Roads/Deco/bush.png" id="23_t85gy"]
+[ext_resource type="Texture2D" uid="uid://bpwd7sn040oyy" path="res://Rocky Roads/Rocky Roads/Objects/sign.png" id="24_1hrt7"]
+[ext_resource type="AudioStream" uid="uid://do50csnp3igxc" path="res://Sonidos/Explosion/Exploto.mp3" id="25_d6wdj"]
+[ext_resource type="AudioStream" uid="uid://cx67aq0xnm831" path="res://Sonidos/Music/A_Bit_Of_Hope_-_David_Fesliyan.mp3" id="25_pbl04"]
+[ext_resource type="AudioStream" uid="uid://dn6xorvn6fqb5" path="res://Sonidos/Recolectar/sound1.wav" id="27_6ltsj"]
+[ext_resource type="PackedScene" uid="uid://dwf2gxwcb527t" path="res://Minijuego2player.tscn" id="27_aebvk"]
+[ext_resource type="Texture2D" uid="uid://cn2juvkce660s" path="res://Home/icons2.png" id="28_32pb1"]
+[ext_resource type="Texture2D" uid="uid://cikdwvcxgc01v" path="res://Home/NEWfondo.png" id="28_84twp"]
+[ext_resource type="Texture2D" uid="uid://bubf7nmf4l5rm" path="res://Home/icons2pressed.png" id="29_uj373"]
+[ext_resource type="Texture2D" uid="uid://bv7vee6cmhxdn" path="res://Home/icons1.png" id="30_10mbn"]
+[ext_resource type="Texture2D" uid="uid://3wbe0gt1i3bp" path="res://Home/icon1pressed.png" id="31_turbw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bm7v"]
+texture = ExtResource("6_hn4i4")
+texture_region_size = Vector2i(32, 32)
+1:7/0 = 0
+1:8/0 = 0
+1:9/0 = 0
+2:7/0 = 0
+2:8/0 = 0
+2:9/0 = 0
+3:7/0 = 0
+3:8/0 = 0
+3:9/0 = 0
+2:5/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+8:4/0 = 0
+8:5/0 = 0
+5:5/0 = 0
+7:7/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+8:7/0 = 0
+10:4/0 = 0
+10:5/0 = 0
+11:4/0 = 0
+11:5/0 = 0
+13:4/0 = 0
+13:5/0 = 0
+14:4/0 = 0
+14:5/0 = 0
+16:4/0 = 0
+16:5/0 = 0
+17:4/0 = 0
+17:5/0 = 0
+5:7/0 = 0
+5:8/0 = 0
+5:9/0 = 0
+10:7/0 = 0
+10:8/0 = 0
+11:7/0 = 0
+11:8/0 = 0
+13:7/0 = 0
+13:8/0 = 0
+14:7/0 = 0
+14:8/0 = 0
+16:7/0 = 0
+16:8/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+2:3/0 = 0
+3:1/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+5:1/0 = 0
+5:2/0 = 0
+5:3/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+8:1/0 = 0
+8:2/0 = 0
+10:1/0 = 0
+10:2/0 = 0
+11:1/0 = 0
+11:2/0 = 0
+13:1/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+14:1/0 = 0
+16:1/0 = 0
+16:2/0 = 0
+17:1/0 = 0
+17:2/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+5:11/0 = 0
+7:10/0 = 0
+7:11/0 = 0
+8:10/0 = 0
+8:11/0 = 0
+10:10/0 = 0
+10:11/0 = 0
+11:10/0 = 0
+11:11/0 = 0
+13:10/0 = 0
+13:11/0 = 0
+14:10/0 = 0
+14:11/0 = 0
+16:10/0 = 0
+17:11/0 = 0
+17:10/0 = 0
+16:11/0 = 0
+17:8/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d82ws"]
+texture = ExtResource("4_u18x1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3l1ap"]
+texture = ExtResource("5_rirkw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dx7v2"]
+texture = ExtResource("6_tjaeu")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vpmp5"]
+texture = ExtResource("5_q1qo6")
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2rt0v"]
+sources/3 = SubResource("TileSetAtlasSource_8bm7v")
+sources/4 = SubResource("TileSetAtlasSource_d82ws")
+sources/5 = SubResource("TileSetAtlasSource_3l1ap")
+sources/6 = SubResource("TileSetAtlasSource_dx7v2")
+sources/7 = SubResource("TileSetAtlasSource_vpmp5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7onb"]
+font_size = 30
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rota"]
+size = Vector2(646, 39.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1v2a5"]
+size = Vector2(46.125, 361)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmpqe"]
+font = ExtResource("13_cn4kl")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_81qkr"]
+font = ExtResource("13_cn4kl")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_10x7l"]
+font = ExtResource("13_cn4kl")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_64rut"]
+font = ExtResource("13_cn4kl")
+font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cts4b"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.905882, 0.0784314, 0.192157, 0.301961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q66xi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xud2e"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a17p"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kmrs"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_sb0no"]
+Button/colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+Button/colors/font_disabled_color = Color(0.713136, 0.232571, 0.347976, 0.5)
+Button/colors/font_hover_color = Color(0.133333, 0.12549, 0.14902, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.337255, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/font_sizes/font_size = 10
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxFlat_cts4b")
+Button/styles/focus = SubResource("StyleBoxFlat_q66xi")
+Button/styles/hover = SubResource("StyleBoxFlat_xud2e")
+Button/styles/normal = SubResource("StyleBoxFlat_2a17p")
+Button/styles/pressed = SubResource("StyleBoxFlat_5kmrs")
+Label/fonts/Fuente = null
+
+[node name="Mundo2" type="Node2D"]
+position = Vector2(558, 346)
+script = ExtResource("1_l06hj")
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(1.12504, -91.5)
+scale = Vector2(2.5402, 10.2381)
+texture = ExtResource("2_mvgpx")
+
+[node name="MountainsA" type="Sprite2D" parent="."]
+position = Vector2(2, -66)
+scale = Vector2(2.54102, 1.51953)
+texture = ExtResource("3_21bhx")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(41, 0)
+tile_set = SubResource("TileSet_2rt0v")
+format = 2
+layer_0/tile_data = PackedInt32Array(-589843, 5, 0, -589842, 65541, 0, -589841, 131077, 0, -589840, 196613, 0, -589815, 5, 0, -589814, 65541, 0, -589813, 131077, 0, -589812, 196613, 0, -327692, 5, 1, -327691, 65541, 1, -327690, 131077, 1, -655368, 5, 1, -655367, 65541, 1, -655366, 131077, 1, -393213, 5, 1, -393212, 65541, 1, -393211, 131077, 1, -720882, 524294, 0, -655346, 524294, 1, -720881, 589830, 0, -655345, 589830, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2.0
+offset_top = -157.0
+offset_right = 38.0
+offset_bottom = -115.0
+text = "0"
+label_settings = SubResource("LabelSettings_n7onb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -3)
+zoom = Vector2(1.8, 1.8)
+
+[node name="WIN" parent="Camera2D" instance=ExtResource("10_uer4w")]
+visible = false
+
+[node name="gameover" parent="Camera2D" instance=ExtResource("11_ds28l")]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 178.75)
+shape = SubResource("RectangleShape2D_1rota")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, -158)
+shape = SubResource("RectangleShape2D_1rota")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-296, -4.5)
+shape = SubResource("RectangleShape2D_1v2a5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(302, 2)
+shape = SubResource("RectangleShape2D_1v2a5")
+
+[node name="PantallaMuerte" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("12_xkx81")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaMuerte"]
+offset_left = 495.0
+offset_top = 35.0
+offset_right = 719.0
+offset_bottom = 77.0
+
+[node name="LabelFinal" type="Label" parent="PantallaMuerte/HBoxContainer"]
+layout_mode = 2
+text = "Score final:"
+label_settings = SubResource("LabelSettings_cmpqe")
+
+[node name="FinalScore" type="Label" parent="PantallaMuerte/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_81qkr")
+
+[node name="Restart" type="Button" parent="PantallaMuerte"]
+offset_left = 223.0
+offset_top = 499.0
+offset_right = 360.0
+offset_bottom = 530.0
+size_flags_vertical = 4
+text = "VOLVER A JUGAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaMuerte"]
+offset_left = 827.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 528.0
+size_flags_vertical = 0
+text = "CONTINUAR
+"
+alignment = 0
+
+[node name="PantallaMuerte2" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("13_y4w5q")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaMuerte2"]
+offset_left = 483.0
+offset_top = 34.0
+offset_right = 720.0
+offset_bottom = 76.0
+
+[node name="LabelFinal" type="Label" parent="PantallaMuerte2/HBoxContainer"]
+layout_mode = 2
+text = "Score Final: "
+label_settings = SubResource("LabelSettings_10x7l")
+
+[node name="FinalScore" type="Label" parent="PantallaMuerte2/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_64rut")
+
+[node name="Restart" type="Button" parent="PantallaMuerte2"]
+offset_left = 223.0
+offset_top = 499.0
+offset_right = 360.0
+offset_bottom = 530.0
+size_flags_vertical = 4
+text = "VOLVER A JUGAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaMuerte2"]
+offset_left = 827.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 528.0
+size_flags_vertical = 0
+text = "CONTINUAR
+
+"
+alignment = 0
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(1.49999, 131.5)
+scale = Vector2(2.54297, 0.664063)
+texture = ExtResource("15_nltry")
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(-1, 6)
+scale = Vector2(2.54297, 1.58594)
+texture = ExtResource("16_x3meq")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-238, 44)
+scale = Vector2(3.3125, 3.8125)
+texture = ExtResource("17_0mol0")
+
+[node name="TreeB" type="Sprite2D" parent="."]
+position = Vector2(266, 3)
+scale = Vector2(3.125, 3.70313)
+texture = ExtResource("18_np4id")
+
+[node name="TreeTrunk" type="Sprite2D" parent="."]
+position = Vector2(-300, 152)
+scale = Vector2(2.03125, 2.40625)
+texture = ExtResource("19_0dqko")
+
+[node name="WoodStakes" type="Sprite2D" parent="."]
+position = Vector2(-147, 96)
+scale = Vector2(3.9375, 2.4375)
+texture = ExtResource("20_d1xol")
+
+[node name="WoodStakes2" type="Sprite2D" parent="."]
+position = Vector2(-265.875, 95.25)
+scale = Vector2(3.99219, 2.64063)
+texture = ExtResource("20_d1xol")
+
+[node name="WoodStakes3" type="Sprite2D" parent="."]
+position = Vector2(-32.75, 94.75)
+scale = Vector2(3.60937, 2.54688)
+texture = ExtResource("20_d1xol")
+
+[node name="WoodStakes4" type="Sprite2D" parent="."]
+position = Vector2(68, 95)
+scale = Vector2(3.28125, 2.46875)
+texture = ExtResource("20_d1xol")
+
+[node name="WoodStakes5" type="Sprite2D" parent="."]
+position = Vector2(165, 99)
+scale = Vector2(3.25415, 2.23486)
+texture = ExtResource("20_d1xol")
+
+[node name="WoodStakes6" type="Sprite2D" parent="."]
+position = Vector2(266.682, 95.6851)
+scale = Vector2(3.76988, 2.29282)
+texture = ExtResource("20_d1xol")
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(295, 136)
+scale = Vector2(3.0625, 2.9375)
+texture = ExtResource("23_t85gy")
+
+[node name="Apple" type="Sprite2D" parent="."]
+position = Vector2(-227, 7)
+texture = ExtResource("22_tlfdp")
+
+[node name="Apple2" type="Sprite2D" parent="."]
+position = Vector2(-292, 25)
+texture = ExtResource("22_tlfdp")
+
+[node name="Apple3" type="Sprite2D" parent="."]
+position = Vector2(-243, -26)
+texture = ExtResource("22_tlfdp")
+
+[node name="Apple4" type="Sprite2D" parent="."]
+position = Vector2(-177, 11)
+texture = ExtResource("22_tlfdp")
+
+[node name="Apple5" type="Sprite2D" parent="."]
+position = Vector2(-279, 0)
+texture = ExtResource("22_tlfdp")
+
+[node name="Apple6" type="Sprite2D" parent="."]
+position = Vector2(-212, -26)
+texture = ExtResource("22_tlfdp")
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(270.5, 142.75)
+scale = Vector2(2.1875, 1.85938)
+texture = ExtResource("24_1hrt7")
+
+[node name="reproductor" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-230, -213)
+
+[node name="reproductor5" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(0, -211)
+
+[node name="reproductor2" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-129, -211)
+
+[node name="reproductor3" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(109, -209)
+
+[node name="reproductor4" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-155, -207)
+
+[node name="reproductor6" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-219, -210)
+
+[node name="reproductor7" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(148, -210)
+
+[node name="reproductor8" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(168, -209)
+
+[node name="reproductor9" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(189, -210)
+
+[node name="reproductor10" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(228, -210)
+
+[node name="reproductor11" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(247, -211)
+
+[node name="reproductor12" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(266, -211)
+
+[node name="reproductor13" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(89, -211)
+
+[node name="reproductor14" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(72, -211)
+
+[node name="reproductor15" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(55, -211)
+
+[node name="reproductor16" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(40, -211)
+
+[node name="reproductor17" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(20, -211)
+
+[node name="reproductor18" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-17, -211)
+
+[node name="reproductor19" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-37, -211)
+
+[node name="reproductor20" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-54, -211)
+
+[node name="reproductor21" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-71, -211)
+
+[node name="reproductor22" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-85, -211)
+
+[node name="reproductor23" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-98, -211)
+
+[node name="reproductor24" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-111, -211)
+
+[node name="reproductor25" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-147, -211)
+
+[node name="reproductor26" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-163, -211)
+
+[node name="reproductor27" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-181, -211)
+
+[node name="reproductor28" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-194, -211)
+
+[node name="reproductor29" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-209, -211)
+
+[node name="reproductor30" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-248, -211)
+
+[node name="reproductor31" parent="." instance=ExtResource("12_j7yam")]
+position = Vector2(-263, -212)
+
+[node name="explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_d6wdj")
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_pbl04")
+volume_db = -12.235
+pitch_scale = 0.83
+
+[node name="recolectar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_6ltsj")
+
+[node name="player" parent="." instance=ExtResource("27_aebvk")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -312.0
+offset_top = -185.0
+offset_right = -268.0
+offset_bottom = -165.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme = SubResource("Theme_sb0no")
+alignment = 1
+
+[node name="Sprite2D4" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(22.6667, 11)
+scale = Vector2(0.186355, 0.165577)
+texture = ExtResource("28_84twp")
+
+[node name="Música" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("28_32pb1")
+texture_pressed = ExtResource("29_uj373")
+
+[node name="FX" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("30_10mbn")
+texture_pressed = ExtResource("31_turbw")
+
+[connection signal="pressed" from="PantallaMuerte/Restart" to="PantallaMuerte" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaMuerte/LEFT" to="PantallaMuerte" method="_on_left_pressed"]
+[connection signal="pressed" from="PantallaMuerte2/Restart" to="PantallaMuerte2" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaMuerte2/LEFT" to="PantallaMuerte2" method="_on_left_pressed"]
+[connection signal="PlayerDied" from="player" to="." method="_on_player_player_died"]
+[connection signal="pressed" from="HBoxContainer/Música" to="." method="_on_música_pressed"]

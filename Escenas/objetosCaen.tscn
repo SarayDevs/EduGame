@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://biykxoctd1udn"]
+
+[ext_resource type="Script" path="res://scrips/ObjetoR.gd" id="1_b5b0q"]
+[ext_resource type="Texture2D" uid="uid://c88ee45qtxgkh" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/ingredientes/aceituna.png" id="1_x3ckr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tr6v0"]
+size = Vector2(27, 24)
+
+[node name="objetosCaen" type="Area2D"]
+script = ExtResource("1_b5b0q")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(1.96875, 1.90625)
+texture = ExtResource("1_x3ckr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_tr6v0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

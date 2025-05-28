@@ -1,0 +1,333 @@
+[gd_scene load_steps=56 format=3 uid="uid://d1j183s1tcml3"]
+
+[ext_resource type="Script" path="res://scrips/playerMinijuego.gd" id="1_fvdmk"]
+[ext_resource type="Texture2D" uid="uid://8qs6o6erx2up" path="res://Carácteres/Capibara/Atacar/atackrightcapibara2.png" id="6_cie0i"]
+[ext_resource type="Texture2D" uid="uid://b2ky1oherah4q" path="res://Carácteres/Capibara/Atacar/atackrightcapibara1.png" id="7_dvoj7"]
+[ext_resource type="Texture2D" uid="uid://dlsaorkw313mb" path="res://Carácteres/Capibara/Morir/dieGranjero1.png" id="7_kaex3"]
+[ext_resource type="Texture2D" uid="uid://ln2b6brmcpso" path="res://Carácteres/Capibara/Caminar Plataforma/walkrightcapibaraGranjero.png" id="7_mfrmm"]
+[ext_resource type="Texture2D" uid="uid://crrmtkgu4w2tj" path="res://Carácteres/Capibara/Morir/dieGranjero2.png" id="8_0htu0"]
+[ext_resource type="Texture2D" uid="uid://dhqj4fn7j0lei" path="res://Carácteres/Capibara/Idle/IdleMedioLadoGranjeroCapibara2.png" id="8_cjcaa"]
+[ext_resource type="Texture2D" uid="uid://d5r6380dsmb3" path="res://Carácteres/Capibara/Atacar/atackrightcapibara3.png" id="8_ry6jw"]
+[ext_resource type="Texture2D" uid="uid://dufagyo4v8rwd" path="res://Carácteres/Capibara/Atacar/atackrightcapibara4.png" id="9_akviy"]
+[ext_resource type="Texture2D" uid="uid://bvxudy15oak10" path="res://Carácteres/Capibara/Morir/dieGranjero3.png" id="9_wgwyp"]
+[ext_resource type="Texture2D" uid="uid://o1dn840gvwp" path="res://Carácteres/Capibara/Atacar/atackrightcapibara5.png" id="10_fmse8"]
+[ext_resource type="Texture2D" uid="uid://d38bxwytypmvt" path="res://Carácteres/Capibara/Morir/dieGranjero4.png" id="10_vg1rs"]
+[ext_resource type="Texture2D" uid="uid://c04ur5yo0yylp" path="res://Carácteres/Capibara/Morir/dieGranjero5.png" id="11_5vg4l"]
+[ext_resource type="Texture2D" uid="uid://dnau6d4t5rcfx" path="res://Carácteres/Capibara/Saltar/jumprightcapibara1.png" id="11_26sq3"]
+[ext_resource type="Texture2D" uid="uid://b5td2frjsne45" path="res://Carácteres/Capibara/Morir/dieGranjero6.png" id="12_7m7ht"]
+[ext_resource type="Texture2D" uid="uid://cq2qg8ll3mewr" path="res://Carácteres/Capibara/Saltar/jumprightcapibara2.png" id="12_f3sxx"]
+[ext_resource type="Texture2D" uid="uid://b71wv22dc0ckd" path="res://Carácteres/Capibara/Morir/dieGranjero7.png" id="13_1x6um"]
+[ext_resource type="Texture2D" uid="uid://ek43i747lqwt" path="res://Carácteres/Capibara/Saltar/jumprightcapibara3.png" id="13_ch13r"]
+[ext_resource type="Texture2D" uid="uid://bly1hsav6xpwc" path="res://Carácteres/Capibara/Morir/dieGranjero8.png" id="14_gnk5c"]
+[ext_resource type="Texture2D" uid="uid://bakd58rv3spig" path="res://Carácteres/Capibara/Saltar/jumprightcapibara4.png" id="14_kap0r"]
+[ext_resource type="Texture2D" uid="uid://ptvlvulu7taj" path="res://Carácteres/Capibara/Saltar/jumprightcapibara5.png" id="15_ghwig"]
+[ext_resource type="Texture2D" uid="uid://d07ray1kvrwcv" path="res://Carácteres/Capibara/Morir/dieGranjero9.png" id="15_v3jdg"]
+[ext_resource type="Texture2D" uid="uid://8vtnbh44qce4" path="res://Carácteres/Capibara/Saltar/jumprightcapibara6.png" id="16_ftm58"]
+[ext_resource type="Texture2D" uid="uid://byhnqb1ig1jlb" path="res://Carácteres/Capibara/Victoria/Wins1.png" id="16_hc7w3"]
+[ext_resource type="Texture2D" uid="uid://bomr0e8ukawi" path="res://Carácteres/Capibara/Victoria/Wins2.png" id="17_pinbj"]
+[ext_resource type="Texture2D" uid="uid://svcy3rxnj6ec" path="res://Carácteres/Capibara/Victoria/Wins3.png" id="18_43htu"]
+[ext_resource type="Texture2D" uid="uid://dbukp5y5hx4qg" path="res://Carácteres/Capibara/Victoria/Wins4.png" id="19_p7fjy"]
+[ext_resource type="Texture2D" uid="uid://bbo4svfwj0iu2" path="res://Carácteres/Capibara/Victoria/Wins5.png" id="20_xby4n"]
+[ext_resource type="Texture2D" uid="uid://nbba5fy85bdy" path="res://Carácteres/Capibara/Victoria/Wins6.png" id="21_42wx5"]
+[ext_resource type="Texture2D" uid="uid://dyoechyytg7xj" path="res://Carácteres/Capibara/Victoria/Wins7.png" id="22_481vj"]
+[ext_resource type="Texture2D" uid="uid://dd48tpwyckg1u" path="res://Carácteres/Capibara/Victoria/Wins8.png" id="23_f18ru"]
+[ext_resource type="AudioStream" uid="uid://cfubsp87je1ln" path="res://Sonidos/Auch/Auch Sound Effect (Cockney Wideboy).mp3" id="32_apkj8"]
+[ext_resource type="AudioStream" uid="uid://dn6xorvn6fqb5" path="res://Sonidos/Recolectar/sound1.wav" id="33_juhmh"]
+[ext_resource type="AudioStream" uid="uid://5bcqr0c5swyo" path="res://Sonidos/salto/saltoretro.mp3" id="34_bbdwy"]
+[ext_resource type="AudioStream" uid="uid://cscsgv8d87ts7" path="res://Sonidos/Espada/Katana Swing Cut - Sound Effect for editing.mp3" id="35_vlryb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cva8x"]
+atlas = ExtResource("7_kaex3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkqq0"]
+atlas = ExtResource("16_hc7w3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnh68"]
+atlas = ExtResource("7_mfrmm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibf5j"]
+atlas = ExtResource("7_mfrmm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bju3p"]
+atlas = ExtResource("7_mfrmm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cf7t"]
+atlas = ExtResource("7_mfrmm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64w4x"]
+atlas = ExtResource("8_cjcaa")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scxju"]
+atlas = ExtResource("8_cjcaa")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dkxl"]
+atlas = ExtResource("8_cjcaa")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knhcw"]
+atlas = ExtResource("8_cjcaa")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_15ku3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cva8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0htu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wgwyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vg1rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5vg4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7m7ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1x6um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gnk5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v3jdg")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkqq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pinbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_43htu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p7fjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xby4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_42wx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_481vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_f18ru")
+}],
+"loop": true,
+"name": &"WIN",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnh68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibf5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bju3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cf7t")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64w4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scxju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dkxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knhcw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dslrw"]
+size = Vector2(17, 27)
+
+[sub_resource type="Animation" id="Animation_vd2rt"]
+resource_name = "Attack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_dvoj7"), ExtResource("6_cie0i"), ExtResource("8_ry6jw"), ExtResource("9_akviy"), ExtResource("10_fmse8")]
+}
+
+[sub_resource type="Animation" id="Animation_n6fd1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_cie0i")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hdhbn"]
+_data = {
+"Attack": SubResource("Animation_vd2rt"),
+"RESET": SubResource("Animation_n6fd1")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy2ov"]
+size = Vector2(27.4608, 15.2216)
+
+[sub_resource type="Animation" id="Animation_iyo8a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_26sq3")]
+}
+
+[sub_resource type="Animation" id="Animation_2gqfb"]
+resource_name = "saltar"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_26sq3"), ExtResource("12_f3sxx"), ExtResource("13_ch13r"), ExtResource("14_kap0r"), ExtResource("15_ghwig"), ExtResource("16_ftm58")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ge7b"]
+_data = {
+"RESET": SubResource("Animation_iyo8a"),
+"saltar": SubResource("Animation_2gqfb")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6boef"]
+radius = 11.0
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_fvdmk")
+
+[node name="CapibaraAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+texture_filter = 1
+position = Vector2(1.12504, -0.499999)
+scale = Vector2(1.17968, 1.15625)
+sprite_frames = SubResource("SpriteFrames_15ku3")
+animation = &"WIN"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_dslrw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(1.23644, 1.15328)
+texture = ExtResource("6_cie0i")
+
+[node name="AtacarAnimacion" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hdhbn")
+}
+
+[node name="Ata" type="Area2D" parent="." groups=["atac"]]
+position = Vector2(1, 4.21772)
+scale = Vector2(1.13046, 1.05443)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ata"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(21.2303, 0.741895)
+shape = SubResource("RectangleShape2D_wy2ov")
+disabled = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(1.09375, 1.09375)
+texture = ExtResource("11_26sq3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D2"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_4ge7b")
+}
+
+[node name="Recolectar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recolectar"]
+shape = SubResource("CapsuleShape2D_6boef")
+
+[node name="Auch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_apkj8")
+
+[node name="Recolectar2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_juhmh")
+
+[node name="Saltar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_bbdwy")
+
+[node name="Atacar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_vlryb")
+
+[node name="Caminar" type="AudioStreamPlayer" parent="."]
+
+[connection signal="animation_finished" from="AtacarAnimacion" to="." method="_on_atacar_animacion_animation_finished"]
+[connection signal="body_entered" from="Ata" to="." method="_on_ata_body_entered"]
+[connection signal="animation_finished" from="Sprite2D2/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="area_entered" from="Recolectar" to="." method="_on_recolectar_area_entered"]

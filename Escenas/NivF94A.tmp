@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://b4wnqrs73bm4x"]
+
+[ext_resource type="Script" path="res://Escenas/Nivel1.gd" id="1_3pfvx"]
+[ext_resource type="Texture2D" uid="uid://yq1hfqcixjmk" path="res://Asset/mesa.png" id="1_s080g"]
+[ext_resource type="Texture2D" uid="uid://wuiuesi4cb6i" path="res://Carácteres/Pizza/pPeperoni1.png" id="2_n84su"]
+[ext_resource type="Texture2D" uid="uid://bajpvxav64ehn" path="res://Asset/cortador.png" id="3_d0vip"]
+[ext_resource type="Texture2D" uid="uid://cvkckvrni2ldg" path="res://Carácteres/Pizza/PHalfRightV.png" id="4_ldqgh"]
+[ext_resource type="Script" path="res://Escenas/PizzaSprite2D.gd" id="4_s56w0"]
+[ext_resource type="Texture2D" uid="uid://hb4w54fvjicc" path="res://Carácteres/Pizza/PHalfv.png" id="5_a4j1l"]
+[ext_resource type="Script" path="res://Escenas/CortadorSprite2D.gd" id="7_u55ep"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3g07l"]
+radius = 34.7322
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3pfvx")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(588.5, 322)
+scale = Vector2(13.9877, 14.2667)
+texture = ExtResource("1_s080g")
+
+[node name="PizzaSprite2D" type="Sprite2D" parent="."]
+position = Vector2(347, 404)
+scale = Vector2(4.34766, 4.1875)
+texture = ExtResource("2_n84su")
+script = ExtResource("4_s56w0")
+
+[node name="Area2D" type="Area2D" parent="PizzaSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaSprite2D/Area2D"]
+position = Vector2(-0.460014, -0.47762)
+shape = SubResource("CircleShape2D_3g07l")
+
+[node name="pizza1_sprite" type="Sprite2D" parent="PizzaSprite2D"]
+visible = false
+texture = ExtResource("4_ldqgh")
+
+[node name="pizza1_sprite2" type="Sprite2D" parent="PizzaSprite2D"]
+visible = false
+position = Vector2(7.81603, 0.357542)
+texture = ExtResource("5_a4j1l")
+
+[node name="CortadorSprite2D" type="Sprite2D" parent="."]
+position = Vector2(898, 382)
+scale = Vector2(3.17188, 2.82813)
+texture = ExtResource("3_d0vip")
+script = ExtResource("7_u55ep")
+
+[node name="cortador" type="Area2D" parent="CortadorSprite2D"]
+position = Vector2(0.945808, -16.2652)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CortadorSprite2D/cortador"]
+polygon = PackedVector2Array(-0.630554, -15.558, 15.4482, -7.77899, 17.9704, 7.4254, 14.1872, 17.6795, 4.72906, 21.569, 3.78323, 45.9668, -6.93594, 45.6132, -6.93594, 21.9226, -16.7094, 16.9724, -20.1773, 3.18232, -16.0788, -8.48617)
+
+[connection signal="body_entered" from="CortadorSprite2D/cortador" to="." method="_on_cortador_body_entered"]
+[connection signal="mouse_entered" from="CortadorSprite2D/cortador" to="CortadorSprite2D" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="CortadorSprite2D/cortador" to="CortadorSprite2D" method="_on_area_2d_mouse_exited"]

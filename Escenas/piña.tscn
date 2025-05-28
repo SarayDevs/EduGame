@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqp0sg6of4xfw"]
+
+[ext_resource type="Script" path="res://scrips/ingrediente1.gd" id="2_je0dh"]
+[ext_resource type="Texture2D" uid="uid://cnpowjc511of3" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/piña.png" id="2_x6hgj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqp3r"]
+size = Vector2(11.2521, 8.00319)
+
+[node name="piña" type="Area2D" groups=["ingredientes", "piña"]]
+position = Vector2(389, 151)
+scale = Vector2(3.19939, 4.74811)
+script = ExtResource("2_je0dh")
+
+[node name="piña2" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, 3.57628e-07)
+scale = Vector2(1.38728, 1)
+texture = ExtResource("2_x6hgj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oqp3r")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

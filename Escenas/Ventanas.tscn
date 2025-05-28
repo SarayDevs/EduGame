@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwo8q14k3ugyp"]
+
+[ext_resource type="Script" path="res://scrips/Ventanas.gd" id="1_hnm1y"]
+[ext_resource type="Texture2D" uid="uid://d22o0syek7jkd" path="res://MARIA JOSÉ ASSETS/Instruccion1.png" id="2_n4xew"]
+[ext_resource type="Texture2D" uid="uid://detpn5tcmml3h" path="res://MARIA JOSÉ ASSETS/instruccion2.png" id="3_e80rf"]
+[ext_resource type="Texture2D" uid="uid://b3smxml2tusfq" path="res://MARIA JOSÉ ASSETS/Instruccion3.png" id="4_q0bth"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hnm1y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Window" type="Window" parent="."]
+title = "popup"
+initial_position = 1
+size = Vector2i(646, 371)
+visible = false
+borderless = true
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Window/Camera2D"]
+texture = ExtResource("2_n4xew")
+
+[node name="Window2" type="Window" parent="."]
+title = "popup2"
+initial_position = 1
+size = Vector2i(646, 371)
+visible = false
+borderless = true
+
+[node name="Camera2D" type="Camera2D" parent="Window2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Window2/Camera2D"]
+texture = ExtResource("3_e80rf")
+
+[node name="Window3" type="Window" parent="."]
+title = "popup3"
+initial_position = 1
+size = Vector2i(647, 531)
+visible = false
+borderless = true
+
+[node name="Camera2D" type="Camera2D" parent="Window3"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Window3/Camera2D"]
+texture = ExtResource("4_q0bth")
+
+[node name="Window4" type="Window" parent="."]
+title = "popup4"
+initial_position = 1
+size = Vector2i(646, 371)
+visible = false
+borderless = true
+
+[node name="Camera2D" type="Camera2D" parent="Window4"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Window4/Camera2D"]
+texture = ExtResource("2_n4xew")
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
+[connection signal="close_requested" from="Window2" to="." method="_on_window_close_requested"]
+[connection signal="close_requested" from="Window3" to="." method="_on_window_close_requested"]
+[connection signal="close_requested" from="Window4" to="." method="_on_window_close_requested"]

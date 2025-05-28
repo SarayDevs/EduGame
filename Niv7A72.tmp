@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7nkk4w062fs7"]
+
+[ext_resource type="Script" path="res://Nivel2.gd" id="1_ewbpw"]
+[ext_resource type="Texture2D" uid="uid://yq1hfqcixjmk" path="res://Asset/mesa.png" id="1_j377u"]
+[ext_resource type="Texture2D" uid="uid://wuiuesi4cb6i" path="res://Carácteres/Pizza/pPeperoni1.png" id="2_adfj8"]
+[ext_resource type="Script" path="res://PPeperoni1.gd" id="3_fmg24"]
+[ext_resource type="Texture2D" uid="uid://dale25icllhh5" path="res://Carácteres/Pizza/pPeperoni2.png" id="3_shxk7"]
+[ext_resource type="Texture2D" uid="uid://qqy6i5f60rl8" path="res://Carácteres/Pizza/plato2.png" id="6_c2u8n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ugq2k"]
+radius = 33.2028
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xc8we"]
+radius = 32.2652
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0leck"]
+size = Vector2(62.958, 64.4723)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0bfn"]
+size = Vector2(63.7165, 64.8281)
+
+[node name="Nivel2" type="Node"]
+script = ExtResource("1_ewbpw")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(573, 323)
+scale = Vector2(14.1605, 14.4444)
+texture = ExtResource("1_j377u")
+
+[node name="PPeperoni1" type="Sprite2D" parent="."]
+position = Vector2(586, 267)
+scale = Vector2(4.1875, 3.92969)
+texture = ExtResource("2_adfj8")
+script = ExtResource("3_fmg24")
+
+[node name="AreaPizza2D" type="Area2D" parent="PPeperoni1"]
+position = Vector2(-47.2836, 1.78131)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PPeperoni1/AreaPizza2D"]
+visible = false
+position = Vector2(46.806, -1.01789)
+shape = SubResource("CircleShape2D_ugq2k")
+
+[node name="PPeperoni2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(473, 432)
+scale = Vector2(4.31641, 4.14063)
+texture = ExtResource("3_shxk7")
+
+[node name="Area2D" type="Area2D" parent="PPeperoni2"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PPeperoni2/Area2D"]
+visible = false
+position = Vector2(0, -0.24151)
+shape = SubResource("CircleShape2D_xc8we")
+
+[node name="CajaPropias" type="Sprite2D" parent="."]
+position = Vector2(249, 440)
+scale = Vector2(4.55859, 4.23438)
+texture = ExtResource("6_c2u8n")
+
+[node name="Area2D" type="Area2D" parent="CajaPropias"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaPropias/Area2D"]
+visible = false
+position = Vector2(0.329048, -0.590385)
+shape = SubResource("RectangleShape2D_0leck")
+
+[node name="CajaImpropias" type="Sprite2D" parent="."]
+position = Vector2(918, 430)
+scale = Vector2(4.41016, 4.22656)
+texture = ExtResource("6_c2u8n")
+
+[node name="Area2D" type="Area2D" parent="CajaImpropias"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CajaImpropias/Area2D"]
+position = Vector2(0.340179, -7.62939e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_s0bfn")
+
+[connection signal="input_event" from="PPeperoni1/AreaPizza2D" to="PPeperoni1" method="_on_area_2d_input_event"]
+[connection signal="body_exited" from="CajaPropias/Area2D" to="PPeperoni1" method="_on_area_2d_body_exited"]

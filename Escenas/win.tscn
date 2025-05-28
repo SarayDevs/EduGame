@@ -1,0 +1,225 @@
+[gd_scene load_steps=21 format=3 uid="uid://dvqtuv7jhfi07"]
+
+[ext_resource type="Script" path="res://scrips/win.gd" id="1_m7qkc"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://DynamicFont/pixelart.ttf" id="2_v28wd"]
+[ext_resource type="FontFile" uid="uid://bu4wj7rpdvt5n" path="res://Fuente/Minecraft.ttf" id="3_o23pa"]
+[ext_resource type="Texture2D" uid="uid://byhnqb1ig1jlb" path="res://Carácteres/Capibara/Victoria/Wins1.png" id="4_3581c"]
+[ext_resource type="Texture2D" uid="uid://bomr0e8ukawi" path="res://Carácteres/Capibara/Victoria/Wins2.png" id="5_ybudt"]
+[ext_resource type="Texture2D" uid="uid://svcy3rxnj6ec" path="res://Carácteres/Capibara/Victoria/Wins3.png" id="6_u83sq"]
+[ext_resource type="Texture2D" uid="uid://dbukp5y5hx4qg" path="res://Carácteres/Capibara/Victoria/Wins4.png" id="7_87tir"]
+[ext_resource type="Texture2D" uid="uid://nbba5fy85bdy" path="res://Carácteres/Capibara/Victoria/Wins6.png" id="8_3xgnf"]
+[ext_resource type="Texture2D" uid="uid://dyoechyytg7xj" path="res://Carácteres/Capibara/Victoria/Wins7.png" id="9_yhpo2"]
+[ext_resource type="Texture2D" uid="uid://dd48tpwyckg1u" path="res://Carácteres/Capibara/Victoria/Wins8.png" id="10_0kamk"]
+[ext_resource type="AudioStream" uid="uid://bfembxxbfkcat" path="res://Sonidos/Music/8-bit RPG Music _ Village Theme (128 kbps).mp3" id="11_rcvcb"]
+[ext_resource type="AudioStream" uid="uid://bc371jj61564d" path="res://Sonidos/Music/sfx-victory6.mp3" id="12_8vmoe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0dv3p"]
+line_spacing = 1.0
+font = ExtResource("3_o23pa")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_eduhr"]
+line_spacing = 1.0
+font = ExtResource("3_o23pa")
+font_size = 30
+
+[sub_resource type="Animation" id="Animation_6bp1p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.85098, 0.294118, 0.2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Text2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uovm5"]
+resource_name = "game"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.85098, 0.294118, 0.2, 0), Color(0.407843, 0.701961, 0.360784, 0.827451)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Text2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fdif"]
+_data = {
+"RESET": SubResource("Animation_6bp1p"),
+"game": SubResource("Animation_uovm5")
+}
+
+[sub_resource type="Animation" id="Animation_mxodo"]
+resource_name = "Ganar"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_3581c"), ExtResource("5_ybudt"), ExtResource("6_u83sq"), ExtResource("7_87tir"), ExtResource("7_87tir"), ExtResource("8_3xgnf"), ExtResource("9_yhpo2"), ExtResource("10_0kamk")]
+}
+
+[sub_resource type="Animation" id="Animation_hrjx3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_3581c")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b73x7"]
+_data = {
+"Ganar": SubResource("Animation_mxodo"),
+"RESET": SubResource("Animation_hrjx3")
+}
+
+[node name="WIN" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_m7qkc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_right = 0.801
+anchor_bottom = 0.795
+offset_top = -2.0
+offset_right = 237.248
+offset_bottom = 138.84
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.294118, 0.2, 0)
+metadata/_edit_lock_ = true
+
+[node name="Text" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -130.0
+offset_right = 524.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_v28wd")
+theme_override_font_sizes/font_size = 100
+text = "¡Felcidades ganaste!
+"
+label_settings = SubResource("LabelSettings_0dv3p")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Text2" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 65.0
+offset_top = 323.0
+offset_right = 1105.0
+offset_bottom = 374.0
+theme_override_fonts/font = ExtResource("2_v28wd")
+theme_override_font_sizes/font_size = 40
+text = "Estas a un paso mas cerca de la libertad
+"
+label_settings = SubResource("LabelSettings_eduhr")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4fdif")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(589, 516)
+scale = Vector2(7.6875, 6.34375)
+texture = ExtResource("4_3581c")
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_b73x7")
+}
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_rcvcb")
+volume_db = -9.176
+
+[node name="Sonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_8vmoe")
+volume_db = 4.588

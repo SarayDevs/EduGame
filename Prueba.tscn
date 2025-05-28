@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0mmm2mbwmd5r"]
+
+[ext_resource type="Script" path="res://prueba.gd" id="1_ctf6n"]
+[ext_resource type="PackedScene" uid="uid://bntp76o6k0bhq" path="res://Escenas/albahaca.tscn" id="2_ma7yg"]
+[ext_resource type="Script" path="res://TemplateArea.gd" id="2_qtsdi"]
+[ext_resource type="Script" path="res://SpecialArea.gd" id="4_bi1ro"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ctf6n")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_qtsdi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+
+[node name="albahaca" parent="." instance=ExtResource("2_ma7yg")]
+
+[node name="SpecialArea" type="Area2D" parent="."]
+script = ExtResource("4_bi1ro")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SpecialArea"]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_entered" from="SpecialArea" to="." method="_on_special_area_area_entered"]
+[connection signal="area_entered" from="SpecialArea" to="SpecialArea" method="_on_area_entered"]

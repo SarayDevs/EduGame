@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://4lgtpca5o8ib"]
+
+[ext_resource type="Script" path="res://scrips/ingrediente1.gd" id="1_6xxi0"]
+[ext_resource type="Texture2D" uid="uid://iv3es2q6cl6s" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/cebollin2.png" id="2_tsnfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhmdj"]
+size = Vector2(34.7673, 19.2357)
+
+[node name="cebollin" type="Area2D" groups=["cebollin", "ingredientes"]]
+position = Vector2(2.06472, 1.90735e-06)
+scale = Vector2(0.60221, 1.11877)
+script = ExtResource("1_6xxi0")
+
+[node name="cebollin" type="Sprite2D" parent="."]
+position = Vector2(0.995085, -1.71363e-06)
+scale = Vector2(6.06861, 2.68185)
+texture = ExtResource("2_tsnfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.107471, -1.66893e-06)
+scale = Vector2(1.46115, 1.48885)
+shape = SubResource("RectangleShape2D_yhmdj")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

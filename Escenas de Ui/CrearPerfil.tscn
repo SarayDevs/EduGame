@@ -1,0 +1,406 @@
+[gd_scene load_steps=42 format=3 uid="uid://d2bjn40lvn5kc"]
+
+[ext_resource type="Script" path="res://Scripts/CrearPerfil.gd" id="1_mj38r"]
+[ext_resource type="FontFile" uid="uid://cqnvnclwrkga5" path="res://TEMA Y FUENTE/RobotoMono-VariableFont_wght.ttf" id="2_agrwp"]
+[ext_resource type="Texture2D" uid="uid://ypeyak3srs86" path="res://Datos/img/frontcapibara.png" id="5_juepj"]
+[ext_resource type="Texture2D" uid="uid://h6tyeff113fk" path="res://Perfiles/insertarnombre.png" id="5_yknbl"]
+[ext_resource type="Texture2D" uid="uid://co7jjg26c1j66" path="res://Carácteres/Capibara/Personaje/frontcapibarapressed.png" id="6_ehkbn"]
+[ext_resource type="Texture2D" uid="uid://c6qq6osupg0mj" path="res://Carácteres/Capibara/Personaje/frontcapibarahover.png" id="7_bp2f1"]
+[ext_resource type="Texture2D" uid="uid://cublr0qddj4lh" path="res://Carácteres/Capibara/Personaje/frontcapibaradisabled.png" id="8_ymlri"]
+[ext_resource type="Texture2D" uid="uid://gd53oaujsnsw" path="res://Perfiles/guardarperfil1.png" id="9_f4eas"]
+[ext_resource type="Texture2D" uid="uid://d4b620jendo1b" path="res://Datos/img/frontgata.png" id="9_w6w52"]
+[ext_resource type="Texture2D" uid="uid://f8vaecdetk0a" path="res://Perfiles/guardarperfilhover.png" id="10_2h357"]
+[ext_resource type="Texture2D" uid="uid://c77cdwnb5nwew" path="res://Carácteres/Gata/Personaje/frontgatapressed.png" id="10_el6sy"]
+[ext_resource type="Texture2D" uid="uid://bmran7sn7sq7s" path="res://Carácteres/Gata/Personaje/frontgatahover.png" id="11_5vysi"]
+[ext_resource type="Texture2D" uid="uid://dq57vhkvcmleb" path="res://Perfiles/guardarperfil2.png" id="11_b4rd6"]
+[ext_resource type="Texture2D" uid="uid://cbu5kypgqe638" path="res://Perfiles/guardarperfil1disabled.png" id="11_lhtre"]
+[ext_resource type="Texture2D" uid="uid://dcjp05rreu4td" path="res://Home/fondos .png" id="13_dj0ua"]
+[ext_resource type="FontFile" uid="uid://w86msflfrqa7" path="res://TEMA Y FUENTE/PixelifySans-VariableFont_wght.ttf" id="13_vqf4q"]
+[ext_resource type="Texture2D" uid="uid://d0k0626fsopr" path="res://Perfiles/perfil.png" id="14_6r55e"]
+[ext_resource type="Texture2D" uid="uid://btcc6agc0vd22" path="res://Perfiles/perfil_hover.png" id="15_oyhwl"]
+[ext_resource type="Texture2D" uid="uid://bbotk65ohh0ou" path="res://Perfiles/perfil_pressed.png" id="16_x5voe"]
+[ext_resource type="Texture2D" uid="uid://b2geqnl8rur1p" path="res://Perfiles/perfildisabled.png" id="17_1ey01"]
+[ext_resource type="Texture2D" uid="uid://r4keolbrwggl" path="res://Perfiles/icons9.png" id="19_5277x"]
+[ext_resource type="Texture2D" uid="uid://t74tmydmayor" path="res://Perfiles/iconback_pressed.png" id="20_3rv81"]
+[ext_resource type="Texture2D" uid="uid://ch0ro7wauydfm" path="res://Perfiles/icons9disabled.png" id="21_vphhb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwlkt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.905882, 0.0784314, 0.192157, 0.301961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p52rk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxuo3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1db7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugj20"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_yue60"]
+Button/colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+Button/colors/font_disabled_color = Color(0.713136, 0.232571, 0.347976, 0.5)
+Button/colors/font_hover_color = Color(0.133333, 0.12549, 0.14902, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.337255, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/font_sizes/font_size = 10
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxFlat_dwlkt")
+Button/styles/focus = SubResource("StyleBoxFlat_p52rk")
+Button/styles/hover = SubResource("StyleBoxFlat_bxuo3")
+Button/styles/normal = SubResource("StyleBoxFlat_u1db7")
+Button/styles/pressed = SubResource("StyleBoxFlat_ugj20")
+Label/fonts/Fuente = null
+
+[sub_resource type="LabelSettings" id="LabelSettings_iafnl"]
+font = ExtResource("2_agrwp")
+font_size = 18
+font_color = Color(0.584314, 0.321569, 0.501961, 1)
+outline_size = 2
+outline_color = Color(0.133333, 0.12549, 0.203922, 1)
+shadow_color = Color(0.133333, 0.12549, 0.203922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7lful"]
+texture = ExtResource("5_yknbl")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2s8d"]
+texture = ExtResource("5_yknbl")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i666w"]
+texture = ExtResource("9_f4eas")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7kk1r"]
+texture = ExtResource("10_2h357")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 7.0
+texture_margin_bottom = 5.0
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 6.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k66t4"]
+texture = ExtResource("11_b4rd6")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.584314, 0.333333, 0.501961, 0.929412)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etmy6"]
+texture = ExtResource("11_lhtre")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jurir"]
+texture = ExtResource("14_6r55e")
+texture_margin_left = 32.0
+texture_margin_right = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fvui"]
+texture = ExtResource("15_oyhwl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7uyh1"]
+texture = ExtResource("16_x5voe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e5mrd"]
+texture = ExtResource("17_1ey01")
+
+[sub_resource type="LabelSettings" id="LabelSettings_aolix"]
+font = ExtResource("13_vqf4q")
+font_size = 100
+font_color = Color(0.584314, 0.321569, 0.501961, 1)
+outline_size = 3
+outline_color = Color(0.133333, 0.12549, 0.203922, 1)
+shadow_size = 4
+shadow_color = Color(0.133333, 0.12549, 0.203922, 1)
+shadow_offset = Vector2(2, 1)
+
+[node name="CrearPerfil" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mj38r")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(575.742, 323.25)
+scale = Vector2(4.21062, 4.21895)
+texture = ExtResource("13_dj0ua")
+
+[node name="VentanaCrearPerfil" type="Window" parent="."]
+title = "Crear perfil"
+initial_position = 1
+size = Vector2i(300, 300)
+min_size = Vector2i(200, 200)
+max_size = Vector2i(400, 400)
+keep_title_visible = true
+content_scale_mode = 1
+content_scale_aspect = 1
+theme = SubResource("Theme_yue60")
+theme_override_colors/title_color = Color(0.584314, 0.321569, 0.501961, 1)
+theme_override_colors/title_outline_modulate = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_constants/title_outline_size = 2
+theme_override_constants/close_v_offset = 0
+theme_override_fonts/title_font = ExtResource("2_agrwp")
+theme_override_font_sizes/title_font_size = 20
+
+[node name="ColorRect" type="ColorRect" parent="VentanaCrearPerfil"]
+offset_right = 500.0
+offset_bottom = 500.0
+color = Color(0.133333, 0.12549, 0.203922, 0.701961)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VentanaCrearPerfil"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.5
+offset_top = -127.0
+offset_right = 114.5
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_yue60")
+theme_override_constants/separation = 15
+
+[node name="EtiquetaNombre" type="Label" parent="VentanaCrearPerfil/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Ingrese su nombre:
+"
+label_settings = SubResource("LabelSettings_iafnl")
+
+[node name="IngresarNombre" type="LineEdit" parent="VentanaCrearPerfil/VBoxContainer"]
+texture_filter = 3
+layout_mode = 2
+theme = SubResource("Theme_yue60")
+theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/caret_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/clear_button_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_constants/minimum_character_width = 16
+theme_override_constants/outline_size = 1
+theme_override_constants/caret_width = 1
+theme_override_fonts/font = ExtResource("2_agrwp")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_7lful")
+theme_override_styles/focus = SubResource("StyleBoxTexture_m2s8d")
+alignment = 1
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Direccion Imagen" type="LineEdit" parent="VentanaCrearPerfil/VBoxContainer"]
+visible = false
+texture_filter = 3
+layout_mode = 2
+theme = SubResource("Theme_yue60")
+theme_override_colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/caret_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_colors/clear_button_color = Color(0.133333, 0.12549, 0.203922, 1)
+theme_override_constants/minimum_character_width = 16
+theme_override_constants/outline_size = 1
+theme_override_constants/caret_width = 1
+theme_override_fonts/font = ExtResource("2_agrwp")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_7lful")
+theme_override_styles/focus = SubResource("StyleBoxTexture_m2s8d")
+alignment = 1
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="EtiquetaNombre2" type="Label" parent="VentanaCrearPerfil/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Seleccionar Imagen
+"
+label_settings = SubResource("LabelSettings_iafnl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VentanaCrearPerfil/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Icono_1" type="TextureButton" parent="VentanaCrearPerfil/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+keep_pressed_outside = true
+texture_normal = ExtResource("6_ehkbn")
+texture_pressed = ExtResource("5_juepj")
+texture_hover = ExtResource("7_bp2f1")
+texture_disabled = ExtResource("8_ymlri")
+stretch_mode = 3
+
+[node name="Icono_2" type="TextureButton" parent="VentanaCrearPerfil/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+keep_pressed_outside = true
+texture_normal = ExtResource("10_el6sy")
+texture_pressed = ExtResource("9_w6w52")
+texture_hover = ExtResource("11_5vysi")
+stretch_mode = 3
+
+[node name="GuardarPerfil" type="Button" parent="VentanaCrearPerfil/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_yue60")
+theme_override_colors/font_color = Color(0.584314, 0.321569, 0.501961, 1)
+theme_override_fonts/font = ExtResource("2_agrwp")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_i666w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7kk1r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k66t4")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_etmy6")
+text = "Guardar"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -65.0
+offset_right = -76.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.9, 3.7)
+theme_override_constants/separation = 20
+
+[node name="BotónPerfil" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_yue60")
+theme_override_constants/h_separation = 200
+theme_override_styles/normal = SubResource("StyleBoxTexture_jurir")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6fvui")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7uyh1")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_e5mrd")
+disabled = true
+button_mask = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+
+[node name="VolverHome" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 70.0
+offset_bottom = 58.0
+scale = Vector2(3, 3)
+disabled = true
+texture_normal = ExtResource("19_5277x")
+texture_pressed = ExtResource("20_3rv81")
+texture_disabled = ExtResource("21_vphhb")
+
+[node name="TitleScreen" type="Label" parent="."]
+layout_mode = 2
+offset_left = 387.0
+offset_top = 30.0
+offset_right = 758.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Perfiles
+"
+label_settings = SubResource("LabelSettings_aolix")
+clip_text = true
+
+[connection signal="pressed" from="VentanaCrearPerfil/VBoxContainer/HBoxContainer/Icono_1" to="." method="_on_icono_1_pressed"]
+[connection signal="pressed" from="VentanaCrearPerfil/VBoxContainer/HBoxContainer/Icono_2" to="." method="_on_icono_2_pressed"]

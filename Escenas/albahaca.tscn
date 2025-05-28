@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bntp76o6k0bhq"]
+
+[ext_resource type="Script" path="res://scrips/ingrediente1.gd" id="1_ge4uq"]
+[ext_resource type="Texture2D" uid="uid://cxp8yu5ec7jco" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/Albahaca2.png" id="2_1qd4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haea1"]
+size = Vector2(27.3435, 21.2498)
+
+[node name="albahaca" type="Area2D" groups=["albahaca", "ingredientes"]]
+position = Vector2(739, 275)
+scale = Vector2(1.14707, 1.92677)
+script = ExtResource("1_ge4uq")
+
+[node name="albahaca" type="Sprite2D" parent="."]
+position = Vector2(0.871776, -1.90735e-06)
+scale = Vector2(3.37817, 2.49116)
+texture = ExtResource("2_1qd4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.762756, -0.0692139)
+rotation = 3.14159
+scale = Vector2(1.09198, -0.983474)
+shape = SubResource("RectangleShape2D_haea1")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

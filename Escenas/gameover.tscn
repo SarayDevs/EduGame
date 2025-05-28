@@ -1,0 +1,212 @@
+[gd_scene load_steps=22 format=3 uid="uid://teyoihvsm2pg"]
+
+[ext_resource type="Script" path="res://scrips/gameover.gd" id="1_dycxn"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://DynamicFont/pixelart.ttf" id="2_jg4vh"]
+[ext_resource type="FontFile" uid="uid://bu4wj7rpdvt5n" path="res://Fuente/Minecraft.ttf" id="3_dquf5"]
+[ext_resource type="Texture2D" uid="uid://dlsaorkw313mb" path="res://Carácteres/Capibara/Morir/dieGranjero1.png" id="3_wola7"]
+[ext_resource type="Texture2D" uid="uid://crrmtkgu4w2tj" path="res://Carácteres/Capibara/Morir/dieGranjero2.png" id="4_4kovp"]
+[ext_resource type="Texture2D" uid="uid://bvxudy15oak10" path="res://Carácteres/Capibara/Morir/dieGranjero3.png" id="5_ulpqb"]
+[ext_resource type="Texture2D" uid="uid://d38bxwytypmvt" path="res://Carácteres/Capibara/Morir/dieGranjero4.png" id="6_polha"]
+[ext_resource type="Texture2D" uid="uid://c04ur5yo0yylp" path="res://Carácteres/Capibara/Morir/dieGranjero5.png" id="7_7t12v"]
+[ext_resource type="Texture2D" uid="uid://b5td2frjsne45" path="res://Carácteres/Capibara/Morir/dieGranjero6.png" id="8_7f120"]
+[ext_resource type="Texture2D" uid="uid://b71wv22dc0ckd" path="res://Carácteres/Capibara/Morir/dieGranjero7.png" id="9_wcwh0"]
+[ext_resource type="Texture2D" uid="uid://d07ray1kvrwcv" path="res://Carácteres/Capibara/Morir/dieGranjero9.png" id="10_c0ue3"]
+[ext_resource type="AudioStream" uid="uid://6u6cqry6xii7" path="res://Sonidos/Derrota/derrota-defeat.mp3" id="12_6siu6"]
+[ext_resource type="AudioStream" uid="uid://20cufb0ls6x1" path="res://Sonidos/Music/Ｅｌ　ｔｒｉｓｔｅ　８－ｂｉｔ.mp3" id="13_uwcp0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7qsfq"]
+font = ExtResource("3_dquf5")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_ybi6h"]
+font = ExtResource("3_dquf5")
+font_size = 35
+
+[sub_resource type="Animation" id="Animation_6bp1p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.898039, 0.196078, 0.286275, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Text2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uovm5"]
+resource_name = "game"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.85098, 0.294118, 0.2, 0), Color(0.996078, 0.196078, 0.184314, 0.709804)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Text2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fdif"]
+_data = {
+"RESET": SubResource("Animation_6bp1p"),
+"game": SubResource("Animation_uovm5")
+}
+
+[sub_resource type="Animation" id="Animation_vu3ta"]
+resource_name = "DIE"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.7, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_wola7"), ExtResource("4_4kovp"), ExtResource("5_ulpqb"), ExtResource("6_polha"), ExtResource("7_7t12v"), ExtResource("8_7f120"), ExtResource("9_wcwh0"), ExtResource("9_wcwh0"), ExtResource("10_c0ue3")]
+}
+
+[sub_resource type="Animation" id="Animation_w0tco"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_wola7")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q116b"]
+_data = {
+"DIE": SubResource("Animation_vu3ta"),
+"RESET": SubResource("Animation_w0tco")
+}
+
+[node name="gameover" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_dycxn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.898039, 0.196078, 0.286275, 1)
+
+[node name="Text" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = -135.0
+offset_right = 323.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_jg4vh")
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_7qsfq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text2" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 144.0
+offset_top = 284.0
+offset_right = 1017.0
+offset_bottom = 331.0
+theme_override_fonts/font = ExtResource("2_jg4vh")
+theme_override_font_sizes/font_size = 40
+text = "Quedaras atrapado por la eternidad MUEJEJEJEJE"
+label_settings = SubResource("LabelSettings_ybi6h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4fdif")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(589, 516)
+scale = Vector2(7.6875, 6.34375)
+texture = ExtResource("3_wola7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_q116b")
+}
+
+[node name="Sonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_6siu6")
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_uwcp0")

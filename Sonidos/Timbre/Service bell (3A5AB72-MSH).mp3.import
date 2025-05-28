@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dh0fvrmdwlsrx"
+path="res://.godot/imported/Service bell (3A5AB72-MSH).mp3-4fc867952eb533b028fa84d891867e1d.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/Timbre/Service bell (3A5AB72-MSH).mp3"
+dest_files=["res://.godot/imported/Service bell (3A5AB72-MSH).mp3-4fc867952eb533b028fa84d891867e1d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

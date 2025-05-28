@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://chje123b8ltcx"]
+
+[ext_resource type="Script" path="res://scrips/PPeperoni1.gd" id="1_fvddi"]
+[ext_resource type="Texture2D" uid="uid://cssw37huuv023" path="res://MARIA JOSÉ ASSETS/2ACTIVIDAD/ordenes/orden22.png" id="2_d33pa"]
+[ext_resource type="AudioStream" uid="uid://dbe4ip0x1b8va" path="res://Sonidos/agarrar/Sujetar.mp3" id="3_ldqu5"]
+[ext_resource type="AudioStream" uid="uid://dt2laci4s5hd2" path="res://Sonidos/agarrar/soltar.mp3" id="4_14whs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kehvv"]
+size = Vector2(35.8208, 55.7296)
+
+[node name="Pizzas" type="Area2D"]
+position = Vector2(589, 277)
+scale = Vector2(4.1875, 3.92969)
+script = ExtResource("1_fvddi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.26237, 2.79524)
+scale = Vector2(0.572121, 0.64049)
+texture = ExtResource("2_d33pa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.91044, 1.78131)
+shape = SubResource("RectangleShape2D_kehvv")
+
+[node name="Agarrar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ldqu5")
+volume_db = 24.0
+
+[node name="Soltar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_14whs")
+volume_db = 12.112
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

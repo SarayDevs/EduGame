@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://b4wnqrs73bm4x"]
+
+[ext_resource type="Script" path="res://Escenas/Nivel1.gd" id="1_3pfvx"]
+[ext_resource type="Texture2D" uid="uid://yq1hfqcixjmk" path="res://Asset/mesa.png" id="1_s080g"]
+[ext_resource type="Texture2D" uid="uid://wuiuesi4cb6i" path="res://Carácteres/Pizza/pPeperoni1.png" id="2_n84su"]
+[ext_resource type="Texture2D" uid="uid://bajpvxav64ehn" path="res://Asset/cortador.png" id="3_d0vip"]
+[ext_resource type="Texture2D" uid="uid://cvkckvrni2ldg" path="res://Carácteres/Pizza/PHalfRightV.png" id="4_ldqgh"]
+[ext_resource type="Texture2D" uid="uid://hb4w54fvjicc" path="res://Carácteres/Pizza/PHalfv.png" id="5_a4j1l"]
+[ext_resource type="Script" path="res://Escenas/CortadorSprite2D.gd" id="7_u55ep"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3g07l"]
+radius = 32.603
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pv768"]
+radius = 18.2994
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3pfvx")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(588.5, 322)
+scale = Vector2(13.9877, 14.2667)
+texture = ExtResource("1_s080g")
+
+[node name="PizzaSprite2D" type="Sprite2D" parent="."]
+position = Vector2(562.875, 367)
+scale = Vector2(6.28516, 5.59375)
+texture = ExtResource("2_n84su")
+
+[node name="Area2D" type="Area2D" parent="PizzaSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaSprite2D/Area2D"]
+shape = SubResource("CircleShape2D_3g07l")
+
+[node name="pizza1_sprite" type="Sprite2D" parent="PizzaSprite2D"]
+visible = false
+texture = ExtResource("4_ldqgh")
+
+[node name="pizza1_sprite2" type="Sprite2D" parent="PizzaSprite2D"]
+visible = false
+position = Vector2(7.81603, 0.357542)
+texture = ExtResource("5_a4j1l")
+
+[node name="CortadorSprite2D" type="Sprite2D" parent="."]
+position = Vector2(898, 382)
+scale = Vector2(3.17188, 2.82813)
+texture = ExtResource("3_d0vip")
+script = ExtResource("7_u55ep")
+
+[node name="Area2D" type="Area2D" parent="CortadorSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CortadorSprite2D/Area2D"]
+position = Vector2(0, -10.9613)
+shape = SubResource("CircleShape2D_pv768")
+
+[connection signal="mouse_entered" from="CortadorSprite2D/Area2D" to="CortadorSprite2D" method="_on_area_2d_mouse_entered"]

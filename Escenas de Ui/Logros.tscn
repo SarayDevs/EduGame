@@ -1,0 +1,186 @@
+[gd_scene load_steps=17 format=3 uid="uid://cteifosep4tiq"]
+
+[ext_resource type="Texture2D" uid="uid://dcjp05rreu4td" path="res://Home/fondos .png" id="1_kdxje"]
+[ext_resource type="Script" path="res://Scripts/Logros.gd" id="1_vstvn"]
+[ext_resource type="FontFile" uid="uid://w86msflfrqa7" path="res://TEMA Y FUENTE/PixelifySans-VariableFont_wght.ttf" id="2_tarei"]
+[ext_resource type="Texture2D" uid="uid://riunknp7ljl6" path="res://Logros/contenedorlogro.png" id="4_b3xlc"]
+[ext_resource type="Texture2D" uid="uid://r4keolbrwggl" path="res://Perfiles/icons9.png" id="5_beous"]
+[ext_resource type="Texture2D" uid="uid://b80i0jj1qmdd0" path="res://Logros/iconoslogros1.png" id="6_n73xn"]
+[ext_resource type="Texture2D" uid="uid://bt2ixok1td5es" path="res://Logros/iconoslogros2.png" id="7_mlx8w"]
+[ext_resource type="Texture2D" uid="uid://t74tmydmayor" path="res://Perfiles/iconback_pressed.png" id="7_rur7l"]
+[ext_resource type="Texture2D" uid="uid://dbullafhmqmji" path="res://Logros/iconoslogros3.png" id="8_r86ym"]
+[ext_resource type="FontFile" uid="uid://cqnvnclwrkga5" path="res://TEMA Y FUENTE/RobotoMono-VariableFont_wght.ttf" id="10_iiqno"]
+[ext_resource type="AudioStream" uid="uid://bfembxxbfkcat" path="res://Sonidos/Music/8-bit RPG Music _ Village Theme (128 kbps).mp3" id="11_eg645"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i1860"]
+font = ExtResource("2_tarei")
+font_size = 100
+font_color = Color(0.584314, 0.321569, 0.501961, 1)
+outline_size = 3
+outline_color = Color(0.133333, 0.12549, 0.203922, 1)
+shadow_size = 4
+shadow_color = Color(0.133333, 0.12549, 0.203922, 1)
+shadow_offset = Vector2(2, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_omaj2"]
+font = ExtResource("2_tarei")
+font_color = Color(0.133333, 0.12549, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7e4qo"]
+font = ExtResource("2_tarei")
+font_color = Color(0.133333, 0.12549, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vbcnu"]
+font = ExtResource("2_tarei")
+font_color = Color(0.133333, 0.188235, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a68xr"]
+font = ExtResource("10_iiqno")
+font_size = 17
+font_color = Color(0.133333, 0.12549, 0.203922, 1)
+outline_size = 1
+outline_color = Color(0.584314, 0.321569, 0.501961, 1)
+shadow_color = Color(0.584314, 0.321569, 0.501961, 1)
+
+[node name="Logros" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vstvn")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-4, -8)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+position = Vector2(576, 331)
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(580.75, 323.75)
+scale = Vector2(4.22894, 4.23856)
+texture = ExtResource("1_kdxje")
+
+[node name="TitleScreen" type="Label" parent="."]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 23.0
+offset_right = 743.0
+offset_bottom = 143.0
+text = "Logros"
+label_settings = SubResource("LabelSettings_i1860")
+
+[node name="Contenedor" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = 166.0
+offset_right = 600.0
+offset_bottom = 398.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/separation = 60
+
+[node name="ContenedorA1" type="Sprite2D" parent="Contenedor"]
+position = Vector2(264.465, 29.25)
+scale = Vector2(2.15714, 2.1)
+texture = ExtResource("4_b3xlc")
+
+[node name="IconoA1" type="Sprite2D" parent="Contenedor"]
+position = Vector2(60.5, 32)
+scale = Vector2(1.906, 1.8045)
+texture = ExtResource("6_n73xn")
+
+[node name="ContenedorA2" type="Sprite2D" parent="Contenedor"]
+position = Vector2(265.5, 107.688)
+scale = Vector2(2.18235, 2.18929)
+texture = ExtResource("4_b3xlc")
+
+[node name="IconoA2" type="Sprite2D" parent="Contenedor"]
+position = Vector2(57.75, 112.436)
+scale = Vector2(1.76563, 1.746)
+texture = ExtResource("7_mlx8w")
+
+[node name="ContenedorA3" type="Sprite2D" parent="Contenedor"]
+position = Vector2(265, 187)
+scale = Vector2(2.18137, 2.29286)
+texture = ExtResource("4_b3xlc")
+
+[node name="IconoA3" type="Sprite2D" parent="Contenedor"]
+position = Vector2(58.016, 190.626)
+scale = Vector2(1.78025, 1.80462)
+texture = ExtResource("8_r86ym")
+
+[node name="Label" type="Label" parent="Contenedor"]
+layout_mode = 2
+text = "Maestro de fracciones
+"
+label_settings = SubResource("LabelSettings_omaj2")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Contenedor"]
+layout_mode = 2
+text = "Experto en fracciones propias e impropias"
+label_settings = SubResource("LabelSettings_7e4qo")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Contenedor"]
+layout_mode = 2
+text = "¡Porcentajes al 100%!"
+label_settings = SubResource("LabelSettings_vbcnu")
+horizontal_alignment = 1
+
+[node name="Volver" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 70.0
+offset_bottom = 58.0
+scale = Vector2(3, 3)
+button_mask = 3
+texture_normal = ExtResource("5_beous")
+texture_pressed = ExtResource("7_rur7l")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 208.0
+offset_right = 991.0
+offset_bottom = 273.0
+text = "Capaz de comprender la relación entre el númerador y el denominador.
+Y como estas afectan la cantidad presentada."
+label_settings = SubResource("LabelSettings_a68xr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 357.0
+offset_right = 990.0
+offset_bottom = 422.0
+text = "Capaz de distinguir entre fracciones propias e impropias.
+"
+label_settings = SubResource("LabelSettings_a68xr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 523.0
+offset_right = 1053.0
+offset_bottom = 588.0
+text = "Capaz de demostrar la comprensión de como los porcentajes se utilizan
+ para comparar proporciones y evaluar cambios porcentuales."
+label_settings = SubResource("LabelSettings_a68xr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_eg645")
+volume_db = -29.715
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

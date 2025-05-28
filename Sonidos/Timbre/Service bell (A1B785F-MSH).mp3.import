@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dohdy1b8s0t1s"
+path="res://.godot/imported/Service bell (A1B785F-MSH).mp3-85fff534fcee5898751ef11f7deb56cf.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/Timbre/Service bell (A1B785F-MSH).mp3"
+dest_files=["res://.godot/imported/Service bell (A1B785F-MSH).mp3-85fff534fcee5898751ef11f7deb56cf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

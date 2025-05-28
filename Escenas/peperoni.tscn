@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://drqvgwu0re70c"]
+
+[ext_resource type="Script" path="res://scrips/ingrediente1.gd" id="1_px0r5"]
+[ext_resource type="Texture2D" uid="uid://cvfbqhhgrkx56" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/pepperonichikito.png" id="2_s62dc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw2rp"]
+size = Vector2(21.3377, 17.293)
+
+[node name="peperoni" type="Area2D" groups=["ingredientes", "peperoni"]]
+position = Vector2(0.45883, 27.8449)
+scale = Vector2(0.752766, 0.887634)
+script = ExtResource("1_px0r5")
+
+[node name="peperoni" type="Sprite2D" parent="."]
+position = Vector2(-0.609526, 0.174733)
+scale = Vector2(4.8855, 3.81766)
+texture = ExtResource("2_s62dc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.60218, 0.17473)
+scale = Vector2(1.92999, 1.82412)
+shape = SubResource("RectangleShape2D_sw2rp")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

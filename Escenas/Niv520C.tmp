@@ -1,0 +1,171 @@
+[gd_scene load_steps=20 format=3 uid="uid://b4wnqrs73bm4x"]
+
+[ext_resource type="Script" path="res://scrips/Logica del juego.gd" id="1_oa4xl"]
+[ext_resource type="Texture2D" uid="uid://yq1hfqcixjmk" path="res://Asset/mesa.png" id="1_s080g"]
+[ext_resource type="Texture2D" uid="uid://wuiuesi4cb6i" path="res://Carácteres/Pizza/pPeperoni1.png" id="2_n84su"]
+[ext_resource type="Texture2D" uid="uid://bajpvxav64ehn" path="res://Asset/cortador.png" id="3_d0vip"]
+[ext_resource type="Script" path="res://scrips/plato.gd" id="6_u3gw4"]
+[ext_resource type="Script" path="res://scrips/CortadorSprite2D.gd" id="7_u55ep"]
+[ext_resource type="Script" path="res://Escenas/PizzaCompleta.gd" id="8_4sclw"]
+[ext_resource type="Texture2D" uid="uid://cvs8pqyjt8vor" path="res://Asset/plato.png" id="9_1bpvq"]
+[ext_resource type="PackedScene" uid="uid://nu4x6ot1wkl0" path="res://porcion_2.tscn" id="9_otwbn"]
+[ext_resource type="PackedScene" uid="uid://dv7g7m3h6us1k" path="res://porción_1.tscn" id="10_40xc3"]
+[ext_resource type="Script" path="res://scrips/Timbre.gd" id="12_xpbxc"]
+[ext_resource type="Texture2D" uid="uid://bif0d6mhry7om" path="res://Asset/timbre1.png" id="13_fqtqw"]
+[ext_resource type="Script" path="res://scrips/Puntos.gd" id="13_nsgbr"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://fuentes/pixelart.ttf" id="13_rcnkm"]
+[ext_resource type="Texture2D" uid="uid://bhsdbp86if4xw" path="res://Asset/Special Icons (2).png" id="14_ofi8l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gw2i6"]
+radius = 17.6691
+
+[sub_resource type="LabelSettings" id="LabelSettings_100f6"]
+line_spacing = 100.0
+font = ExtResource("13_rcnkm")
+font_size = 40
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3g07l"]
+radius = 31.7412
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oyh2s"]
+radius = 45.0111
+
+[node name="Nivel1" type="Node2D"]
+position = Vector2(-1, 2)
+script = ExtResource("1_oa4xl")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(579, 331)
+scale = Vector2(14.1289, 14.5556)
+texture = ExtResource("1_s080g")
+
+[node name="Plato" type="Area2D" parent="."]
+position = Vector2(890, 361)
+scale = Vector2(10.9375, 11)
+script = ExtResource("6_u3gw4")
+
+[node name="Plato" type="Sprite2D" parent="Plato"]
+position = Vector2(-0.457138, -0.272726)
+texture = ExtResource("9_1bpvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plato"]
+position = Vector2(-1.00571, 0.181817)
+shape = SubResource("CircleShape2D_gw2i6")
+
+[node name="Label" type="Label" parent="Plato"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Puntos1" type="CanvasLayer" parent="."]
+script = ExtResource("13_nsgbr")
+
+[node name="points" type="Label" parent="Puntos1"]
+offset_left = 1066.0
+offset_top = 35.0
+offset_right = 1120.0
+offset_bottom = 90.0
+text = "0"
+label_settings = SubResource("LabelSettings_100f6")
+
+[node name="Score" type="Label" parent="Puntos1"]
+offset_left = 833.0
+offset_top = 22.0
+offset_right = 1052.0
+offset_bottom = 77.0
+text = "Puntaje:"
+label_settings = SubResource("LabelSettings_100f6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Puntos1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 294.0
+offset_top = 84.0
+offset_right = 510.0
+offset_bottom = 151.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="Puntos1/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("14_ofi8l")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="Puntos1/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("14_ofi8l")
+expand_mode = 2
+
+[node name="estrella3" type="TextureRect" parent="Puntos1/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("14_ofi8l")
+expand_mode = 2
+
+[node name="PizzaCompleta" type="Area2D" parent="."]
+position = Vector2(277, 315)
+scale = Vector2(4.34766, 4.1875)
+script = ExtResource("8_4sclw")
+porcion1_scene = ExtResource("10_40xc3")
+porcion2_scene = ExtResource("9_otwbn")
+
+[node name="PizzaSprite2D" type="Sprite2D" parent="PizzaCompleta"]
+light_mask = 7
+visibility_layer = 495
+position = Vector2(0, 0.238804)
+texture = ExtResource("2_n84su")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaCompleta"]
+position = Vector2(-0.92004, 0.2388)
+shape = SubResource("CircleShape2D_3g07l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PizzaCompleta"]
+position = Vector2(-0.92004, 0.2388)
+shape = SubResource("CircleShape2D_3g07l")
+
+[node name="porcion2" parent="." instance=ExtResource("9_otwbn")]
+visible = false
+
+[node name="porción1" parent="." instance=ExtResource("10_40xc3")]
+visible = false
+
+[node name="TIMBRE2D" type="Area2D" parent="."]
+position = Vector2(563, 136)
+scale = Vector2(2, 2.0625)
+script = ExtResource("12_xpbxc")
+
+[node name="timbre" type="Sprite2D" parent="TIMBRE2D"]
+position = Vector2(2, 1.93939)
+texture = ExtResource("13_fqtqw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TIMBRE2D/timbre"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TIMBRE2D"]
+position = Vector2(1.5, 2.90909)
+scale = Vector2(0.5, 0.484848)
+shape = SubResource("CircleShape2D_oyh2s")
+
+[node name="cortador" type="Area2D" parent="."]
+position = Vector2(575, 439)
+scale = Vector2(3.17188, 2.82813)
+collision_layer = 3
+script = ExtResource("7_u55ep")
+
+[node name="CortadorSprite2D" type="Sprite2D" parent="cortador"]
+position = Vector2(-0.945801, -0.707184)
+texture = ExtResource("3_d0vip")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cortador"]
+position = Vector2(-1.57635, -20.8618)
+polygon = PackedVector2Array(-6.30537, -8.83976, 8.19707, -8.13258, 19.2315, 0.707184, 18.601, 18.0331, 6.936, 26.8729, 5.35963, 49.5027, 0.315308, 50.2099, -5.0443, 50.5635, -5.67484, 26.8729, -18.9162, 14.4972, -17.9704, 0)
+
+[connection signal="perderEstrella" from="." to="Puntos1" method="_on_nivel_1_perder_estrella"]
+[connection signal="area_entered" from="Plato" to="Plato" method="_on_area_entered"]
+[connection signal="ready" from="Plato" to="Plato" method="_on_ready"]
+[connection signal="area_entered" from="PizzaCompleta" to="PizzaCompleta" method="_on_area_entered"]
+[connection signal="evaluarTIMBRE" from="TIMBRE2D" to="Plato" method="_on_timbre_2d_evaluar_timbre"]
+[connection signal="mouse_entered" from="TIMBRE2D" to="TIMBRE2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TIMBRE2D" to="TIMBRE2D" method="_on_mouse_exited"]
+[connection signal="cortar_pizza" from="cortador" to="Plato" method="_on_cortador_cortar_pizza"]
+[connection signal="mouse_entered" from="cortador" to="cortador" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="cortador" to="cortador" method="_on_mouse_exited"]

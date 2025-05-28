@@ -1,0 +1,152 @@
+[gd_scene load_steps=20 format=3 uid="uid://c7nkk4w062fs7"]
+
+[ext_resource type="Script" path="res://scrips/Nivel2.gd" id="1_ewbpw"]
+[ext_resource type="Texture2D" uid="uid://yq1hfqcixjmk" path="res://Asset/mesa.png" id="1_j377u"]
+[ext_resource type="Texture2D" uid="uid://wuiuesi4cb6i" path="res://Carácteres/Pizza/pPeperoni1.png" id="2_adfj8"]
+[ext_resource type="Script" path="res://scrips/PPeperoni1.gd" id="3_fmg24"]
+[ext_resource type="Texture2D" uid="uid://dale25icllhh5" path="res://Carácteres/Pizza/pPeperoni2.png" id="3_shxk7"]
+[ext_resource type="Script" path="res://Escenas/AreaCIP2D.gd" id="5_qee17"]
+[ext_resource type="Script" path="res://scrips/CajaPropias.gd" id="5_r1ojw"]
+[ext_resource type="Texture2D" uid="uid://qqy6i5f60rl8" path="res://Carácteres/Pizza/plato2.png" id="6_c2u8n"]
+[ext_resource type="Script" path="res://Escenas/AreaCP2D.gd" id="6_m6vgn"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://fuentes/pixelart.ttf" id="7_64trn"]
+[ext_resource type="PackedScene" uid="uid://bo4pdioxkvf3m" path="res://Escenas/transCaja2.tscn" id="7_lp8pl"]
+[ext_resource type="PackedScene" uid="uid://bbvt32epf6p0k" path="res://Escenas/transcaja.tscn" id="8_4qjmn"]
+[ext_resource type="Texture2D" uid="uid://bhsdbp86if4xw" path="res://Asset/Special Icons (2).png" id="8_jween"]
+[ext_resource type="Script" path="res://Escenas/Area2Pizza2D.gd" id="13_1475e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ymfgp"]
+line_spacing = 100.0
+font = ExtResource("7_64trn")
+font_size = 40
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0bfn"]
+size = Vector2(42.6288, 40.4584)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0leck"]
+size = Vector2(39.0472, 37.5498)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ugq2k"]
+radius = 31.7775
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xc8we"]
+radius = 32.2652
+
+[node name="Nivel2" type="Node"]
+script = ExtResource("1_ewbpw")
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(573, 323)
+scale = Vector2(14.1605, 14.4444)
+texture = ExtResource("1_j377u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="points" type="Label" parent="CanvasLayer"]
+offset_left = 1066.0
+offset_top = 35.0
+offset_right = 1120.0
+offset_bottom = 90.0
+text = "0"
+label_settings = SubResource("LabelSettings_ymfgp")
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 833.0
+offset_top = 22.0
+offset_right = 1052.0
+offset_bottom = 77.0
+text = "Puntaje:"
+label_settings = SubResource("LabelSettings_ymfgp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 294.0
+offset_top = 84.0
+offset_right = 510.0
+offset_bottom = 151.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_jween")
+expand_mode = 2
+
+[node name="AreaCIP2D" type="Area2D" parent="."]
+position = Vector2(918, 430)
+scale = Vector2(4.41016, 4.22656)
+script = ExtResource("5_qee17")
+
+[node name="CajaImpropias" type="Sprite2D" parent="AreaCIP2D"]
+texture = ExtResource("6_c2u8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCIP2D"]
+position = Vector2(1.52588e-05, 0.591499)
+shape = SubResource("RectangleShape2D_s0bfn")
+
+[node name="AreaCP2D" type="Area2D" parent="."]
+position = Vector2(249, 440)
+scale = Vector2(4.55859, 4.23438)
+script = ExtResource("6_m6vgn")
+
+[node name="CajaPropias" type="Sprite2D" parent="AreaCP2D"]
+position = Vector2(1.14441e-05, 0)
+texture = ExtResource("6_c2u8n")
+script = ExtResource("5_r1ojw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCP2D"]
+position = Vector2(-0.219364, 0.944649)
+shape = SubResource("RectangleShape2D_0leck")
+
+[node name="rojo" parent="." instance=ExtResource("7_lp8pl")]
+visible = false
+
+[node name="verde" parent="." instance=ExtResource("8_4qjmn")]
+visible = false
+
+[node name="AreaPizza2D" type="Area2D" parent="." groups=["propias"]]
+visible = false
+position = Vector2(589, 277)
+scale = Vector2(4.1875, 3.92969)
+script = ExtResource("3_fmg24")
+
+[node name="PPeperoni1" type="Sprite2D" parent="AreaPizza2D"]
+position = Vector2(-0.716415, -0.254471)
+texture = ExtResource("2_adfj8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPizza2D"]
+position = Vector2(-0.955185, -0.254471)
+shape = SubResource("CircleShape2D_ugq2k")
+
+[node name="Area2Pizza2D" type="Area2D" parent="." groups=["impropias"]]
+visible = false
+position = Vector2(473, 432)
+scale = Vector2(4.31641, 4.14063)
+script = ExtResource("13_1475e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Pizza2D"]
+position = Vector2(0, -0.24151)
+shape = SubResource("CircleShape2D_xc8we")
+
+[node name="PPeperoni2" type="Sprite2D" parent="Area2Pizza2D"]
+texture = ExtResource("3_shxk7")
+
+[connection signal="area_entered" from="AreaCIP2D" to="AreaCIP2D" method="_on_area_entered"]
+[connection signal="area_entered" from="AreaCP2D" to="AreaCP2D" method="_on_area_entered"]
+[connection signal="mouse_entered" from="AreaPizza2D" to="AreaPizza2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="AreaPizza2D" to="AreaPizza2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Area2Pizza2D" to="Area2Pizza2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2Pizza2D" to="Area2Pizza2D" method="_on_mouse_exited"]

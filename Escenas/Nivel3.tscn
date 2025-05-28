@@ -1,0 +1,712 @@
+[gd_scene load_steps=67 format=3 uid="uid://7yuo1op3a8me"]
+
+[ext_resource type="Texture2D" uid="uid://52c7j5f6vx75" path="res://Asset/MesaFondo.png" id="1_6yg5n"]
+[ext_resource type="Script" path="res://scrips/Logica del juego.gd" id="1_aksah"]
+[ext_resource type="Texture2D" uid="uid://dei4f0kogddjd" path="res://Asset/TablaPicar.png" id="2_4pmjd"]
+[ext_resource type="PackedScene" uid="uid://dvqtuv7jhfi07" path="res://Escenas/win.tscn" id="3_xl2d3"]
+[ext_resource type="PackedScene" uid="uid://teyoihvsm2pg" path="res://Escenas/gameover.tscn" id="4_oyq44"]
+[ext_resource type="FontFile" uid="uid://bu7d7qqv3lvh8" path="res://DynamicFont/pixelart.ttf" id="4_v0vrx"]
+[ext_resource type="Texture2D" uid="uid://bhsdbp86if4xw" path="res://Asset/Special Icons (2).png" id="5_dadgm"]
+[ext_resource type="Texture2D" uid="uid://c5jdkblvx1nav" path="res://MARIA JOSÉ ASSETS/3ACTIVIDAD/bandeja.png" id="7_tc2ej"]
+[ext_resource type="PackedScene" uid="uid://wfhau7vsaybq" path="res://Escenas/anchoa.tscn" id="9_ewvhg"]
+[ext_resource type="Texture2D" uid="uid://bif0d6mhry7om" path="res://Asset/timbre1.png" id="9_g272d"]
+[ext_resource type="Script" path="res://scrips/Timbre.gd" id="9_r36om"]
+[ext_resource type="PackedScene" uid="uid://byts6b2uouwls" path="res://Escenas/pizza_porcentaje.tscn" id="9_thdi2"]
+[ext_resource type="PackedScene" uid="uid://pu3nnpxrilc" path="res://Escenas/pimenton.tscn" id="10_v8c2k"]
+[ext_resource type="PackedScene" uid="uid://bntp76o6k0bhq" path="res://Escenas/albahaca.tscn" id="11_fplme"]
+[ext_resource type="PackedScene" uid="uid://4lgtpca5o8ib" path="res://Escenas/cebollin.tscn" id="11_j5v72"]
+[ext_resource type="PackedScene" uid="uid://biirjjbx3v7ee" path="res://Escenas/aceituna.tscn" id="12_ajkwd"]
+[ext_resource type="PackedScene" uid="uid://b7cn7gevx23a5" path="res://Escenas/champiñon.tscn" id="13_4lafn"]
+[ext_resource type="PackedScene" uid="uid://bqp0sg6of4xfw" path="res://Escenas/piña.tscn" id="14_h0yp7"]
+[ext_resource type="PackedScene" uid="uid://drqvgwu0re70c" path="res://Escenas/peperoni.tscn" id="15_58q80"]
+[ext_resource type="Script" path="res://scrips/Clock.gd" id="16_y6rpm"]
+[ext_resource type="PackedScene" uid="uid://ebkggefdpv5j" path="res://Escenas/queso.tscn" id="17_1ynlu"]
+[ext_resource type="PackedScene" uid="uid://ctfue1q5k7r56" path="res://Escenas/nodo_control.tscn" id="21_v6epn"]
+[ext_resource type="Script" path="res://scrips/receptor.gd" id="21_wabg4"]
+[ext_resource type="PackedScene" uid="uid://4oeygcwu28g" path="res://Escenas/division.tscn" id="22_gki24"]
+[ext_resource type="Script" path="res://scrips/Porcion1Wu.gd" id="23_8odi7"]
+[ext_resource type="Script" path="res://scrips/Porcion2Wu.gd" id="24_mquhr"]
+[ext_resource type="Script" path="res://scrips/Porcion3Wu.gd" id="25_2j7a6"]
+[ext_resource type="Script" path="res://scrips/Puntos.gd" id="26_q55gp"]
+[ext_resource type="Script" path="res://scrips/Porcion4Wu.gd" id="26_u8asa"]
+[ext_resource type="Script" path="res://scrips/Porcion5Wu.gd" id="27_405h0"]
+[ext_resource type="PackedScene" uid="uid://dxsq3jixsjpnn" path="res://Escenas/WindowLevel3.tscn" id="29_oijpx"]
+[ext_resource type="Script" path="res://scrips/WindowLevel3.gd" id="30_ge13j"]
+[ext_resource type="AudioStream" uid="uid://h2vgukqwriw7" path="res://Sonidos/Music/AdhesiveWombat - Night Shade.mp3" id="31_5vilr"]
+[ext_resource type="Script" path="res://Escenas/Buttonvideo3.gd" id="32_8jt1v"]
+[ext_resource type="FontFile" uid="uid://bu4wj7rpdvt5n" path="res://Fuente/Minecraft.ttf" id="34_l0s73"]
+[ext_resource type="AudioStream" uid="uid://8tric6rm2s8s" path="res://Sonidos/Timbre/TilinTilin.mp3" id="35_5sjxx"]
+[ext_resource type="Script" path="res://scrips/PantallaGameover.gd" id="35_uo4og"]
+[ext_resource type="AudioStream" uid="uid://dt2laci4s5hd2" path="res://Sonidos/agarrar/soltar.mp3" id="36_cmbsn"]
+[ext_resource type="AudioStream" uid="uid://dbe4ip0x1b8va" path="res://Sonidos/agarrar/Sujetar.mp3" id="37_6qysn"]
+[ext_resource type="Script" path="res://scrips/PantallaGanarUltimo.gd" id="40_tq8pq"]
+[ext_resource type="Texture2D" uid="uid://cikdwvcxgc01v" path="res://Home/NEWfondo.png" id="41_4iwve"]
+[ext_resource type="Texture2D" uid="uid://cn2juvkce660s" path="res://Home/icons2.png" id="41_csryd"]
+[ext_resource type="Texture2D" uid="uid://bubf7nmf4l5rm" path="res://Home/icons2pressed.png" id="42_6t2ss"]
+[ext_resource type="Texture2D" uid="uid://bv7vee6cmhxdn" path="res://Home/icons1.png" id="43_0i7c2"]
+[ext_resource type="Texture2D" uid="uid://3wbe0gt1i3bp" path="res://Home/icon1pressed.png" id="44_506oi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hramg"]
+radius = 32.3883
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqp3r"]
+size = Vector2(13.1667, 9.03226)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haea1"]
+size = Vector2(18.15, 9.41532)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw2rp"]
+size = Vector2(26.1524, 21.2035)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1my7k"]
+size = Vector2(15.4468, 15.1064)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owgfo"]
+size = Vector2(14.8085, 10.4828)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3od8"]
+size = Vector2(22.6001, 15.4054)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhmdj"]
+size = Vector2(31.2382, 17.1111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtfbp"]
+size = Vector2(17.2, 9.80645)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_keogu"]
+size = Vector2(18.5826, 17.9557)
+
+[sub_resource type="LabelSettings" id="LabelSettings_efetv"]
+line_spacing = 100.0
+font = ExtResource("4_v0vrx")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_a00f5"]
+font = ExtResource("34_l0s73")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2qmt"]
+font = ExtResource("34_l0s73")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_rc768"]
+font = ExtResource("34_l0s73")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_52mrh"]
+font = ExtResource("34_l0s73")
+font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0nxl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.905882, 0.0784314, 0.192157, 0.301961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6eqv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2mgg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1rgu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbi74"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_61pkp"]
+Button/colors/font_color = Color(0.133333, 0.12549, 0.203922, 1)
+Button/colors/font_disabled_color = Color(0.713136, 0.232571, 0.347976, 0.5)
+Button/colors/font_hover_color = Color(0.133333, 0.12549, 0.14902, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.337255, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/font_sizes/font_size = 10
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxFlat_a0nxl")
+Button/styles/focus = SubResource("StyleBoxFlat_u6eqv")
+Button/styles/hover = SubResource("StyleBoxFlat_a2mgg")
+Button/styles/normal = SubResource("StyleBoxFlat_m1rgu")
+Button/styles/pressed = SubResource("StyleBoxFlat_bbi74")
+Label/fonts/Fuente = null
+
+[node name="Nivel3" type="Node"]
+script = ExtResource("1_aksah")
+metadata/_edit_vertical_guides_ = [-2163.0]
+
+[node name="nodo_control" parent="." instance=ExtResource("21_v6epn")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="WIN" parent="Camera2D" instance=ExtResource("3_xl2d3")]
+visible = false
+
+[node name="gameover" parent="Camera2D" instance=ExtResource("4_oyq44")]
+visible = false
+
+[node name="Mesa" type="Sprite2D" parent="."]
+position = Vector2(579.5, 323.5)
+scale = Vector2(4.22344, 4.26797)
+texture = ExtResource("1_6yg5n")
+metadata/_edit_lock_ = true
+
+[node name="bandejaIngredientes" type="Sprite2D" parent="."]
+position = Vector2(873, 379)
+scale = Vector2(4.35893, 4.02228)
+texture = ExtResource("7_tc2ej")
+
+[node name="TablaPicar" type="Sprite2D" parent="."]
+position = Vector2(412, 365)
+scale = Vector2(1.80134, 2.12609)
+texture = ExtResource("2_4pmjd")
+
+[node name="Click" type="Node" parent="."]
+script = ExtResource("16_y6rpm")
+
+[node name="TIMBRE" type="Area2D" parent="."]
+position = Vector2(636, 140)
+script = ExtResource("9_r36om")
+
+[node name="Timbre1" type="Sprite2D" parent="TIMBRE"]
+position = Vector2(-1.99996, 1.00002)
+scale = Vector2(2.2269, 2.28645)
+texture = ExtResource("9_g272d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TIMBRE"]
+position = Vector2(-3, 4)
+shape = SubResource("CircleShape2D_hramg")
+
+[node name="pizzaPorcentaje" parent="." instance=ExtResource("9_thdi2")]
+position = Vector2(381, 376)
+
+[node name="piña" type="Area2D" parent="." groups=["ingredientes", "piña"]]
+position = Vector2(731, 492)
+scale = Vector2(5.99998, 7.75001)
+script = ExtResource("21_wabg4")
+ingredientes7_scene = ExtResource("14_h0yp7")
+
+[node name="piña2" type="Sprite2D" parent="piña"]
+position = Vector2(0.166664, -0.129032)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piña"]
+position = Vector2(0.583336, -0.387093)
+shape = SubResource("RectangleShape2D_oqp3r")
+
+[node name="albahaca" type="Area2D" parent="." groups=["albahaca", "ingredientes"]]
+position = Vector2(735, 263)
+scale = Vector2(5, 7.75001)
+script = ExtResource("21_wabg4")
+ingredientes1_scene = ExtResource("11_fplme")
+
+[node name="pimiento" type="Sprite2D" parent="albahaca"]
+position = Vector2(-0.599993, 0.903228)
+scale = Vector2(1.57314, 0.0179042)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="albahaca"]
+position = Vector2(-0.600015, 1.16129)
+shape = SubResource("RectangleShape2D_haea1")
+
+[node name="peperoni" type="Area2D" parent="." groups=["ingredientes", "peperoni"]]
+position = Vector2(875, 491)
+scale = Vector2(3.28125, 3.57031)
+script = ExtResource("21_wabg4")
+ingredientes8_scene = ExtResource("15_58q80")
+
+[node name="peperoni" type="Sprite2D" parent="peperoni"]
+position = Vector2(-0.600006, 0.774185)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="peperoni"]
+position = Vector2(-0.914291, -0.560174)
+shape = SubResource("RectangleShape2D_sw2rp")
+
+[node name="anchoa" type="Area2D" parent="." groups=["anchoa", "ingredientes"]]
+position = Vector2(870, 272)
+scale = Vector2(5.87501, 5.87502)
+script = ExtResource("21_wabg4")
+ingredientes2_scene = ExtResource("9_ewvhg")
+
+[node name="Anchoa" type="Sprite2D" parent="anchoa"]
+position = Vector2(0.936172, 1.10638)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="anchoa"]
+position = Vector2(-0.170215, 1.02128)
+shape = SubResource("RectangleShape2D_1my7k")
+
+[node name="champiñon" type="Area2D" parent="." groups=["champiñon", "ingredientes"]]
+position = Vector2(1015, 272)
+scale = Vector2(5.87501, 7.25)
+script = ExtResource("21_wabg4")
+ingredientes3_scene = ExtResource("13_4lafn")
+
+[node name="champiñon" type="Sprite2D" parent="champiñon"]
+position = Vector2(0.0850983, -0.137936)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="champiñon"]
+position = Vector2(-0.340427, -0.137933)
+shape = SubResource("RectangleShape2D_owgfo")
+
+[node name="aceituna" type="Area2D" parent="." groups=["aceituna", "ingredientes"]]
+position = Vector2(737, 378)
+scale = Vector2(3.74999, 4.62502)
+script = ExtResource("21_wabg4")
+ingredientes4_scene = ExtResource("12_ajkwd")
+
+[node name="aceituna" type="Sprite2D" parent="aceituna"]
+position = Vector2(0.266678, 0.324318)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aceituna"]
+position = Vector2(-0.433334, 0.648636)
+shape = SubResource("RectangleShape2D_n3od8")
+
+[node name="cebollin" type="Area2D" parent="." groups=["cebollin", "ingredientes"]]
+position = Vector2(882, 379)
+scale = Vector2(2.62499, 4.50001)
+script = ExtResource("21_wabg4")
+ingredientes5_scene = ExtResource("11_j5v72")
+
+[node name="cebollin" type="Sprite2D" parent="cebollin"]
+position = Vector2(0, 0.129036)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cebollin"]
+position = Vector2(-3.04764, 0.333336)
+shape = SubResource("RectangleShape2D_yhmdj")
+
+[node name="pimenton" type="Area2D" parent="." groups=["ingredientes", "pimenton"]]
+position = Vector2(1011, 377)
+scale = Vector2(5, 7.75001)
+script = ExtResource("21_wabg4")
+ingredientes6_scene = ExtResource("10_v8c2k")
+
+[node name="pimenton" type="Sprite2D" parent="pimenton"]
+position = Vector2(0.800003, 0.516129)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pimenton"]
+position = Vector2(1.52588e-05, 0.258064)
+shape = SubResource("RectangleShape2D_gtfbp")
+
+[node name="queso" type="Area2D" parent="." groups=["ingredientes", "queso"]]
+position = Vector2(1012, 491)
+scale = Vector2(4.35893, 4.02228)
+script = ExtResource("21_wabg4")
+ingredientes9_scene = ExtResource("17_1ynlu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="queso"]
+position = Vector2(0.573547, -1.02216)
+shape = SubResource("RectangleShape2D_keogu")
+
+[node name="division2" parent="." instance=ExtResource("22_gki24")]
+position = Vector2(379, 369)
+
+[node name="Porcion1Wu" type="Area2D" parent="division2"]
+script = ExtResource("23_8odi7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="division2/Porcion1Wu"]
+visible = false
+
+[node name="Porcion2Wu" type="Area2D" parent="division2"]
+script = ExtResource("24_mquhr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="division2/Porcion2Wu"]
+visible = false
+
+[node name="Porcion3Wu" type="Area2D" parent="division2"]
+script = ExtResource("25_2j7a6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="division2/Porcion3Wu"]
+visible = false
+
+[node name="Porcion4Wu" type="Area2D" parent="division2"]
+script = ExtResource("26_u8asa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="division2/Porcion4Wu"]
+visible = false
+
+[node name="Porcion5Wu" type="Area2D" parent="division2"]
+script = ExtResource("27_405h0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="division2/Porcion5Wu"]
+visible = false
+
+[node name="Completa2" type="Area2D" parent="division2"]
+script = ExtResource("27_405h0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="division2/Completa2"]
+
+[node name="aceituna2" parent="." instance=ExtResource("12_ajkwd")]
+visible = false
+position = Vector2(-29, 332)
+
+[node name="Puntos" type="CanvasLayer" parent="."]
+script = ExtResource("26_q55gp")
+
+[node name="points" type="Label" parent="Puntos"]
+offset_left = 1058.0
+offset_top = 35.0
+offset_right = 1112.0
+offset_bottom = 90.0
+text = "0"
+label_settings = SubResource("LabelSettings_efetv")
+
+[node name="Score" type="Label" parent="Puntos"]
+offset_left = 888.0
+offset_top = 27.0
+offset_right = 1107.0
+offset_bottom = 82.0
+text = "Ronda: "
+label_settings = SubResource("LabelSettings_efetv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Puntos"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 300.0
+offset_top = 69.0
+offset_right = 516.0
+offset_bottom = 136.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="Puntos/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="Puntos/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella3" type="TextureRect" parent="Puntos/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Node2D" parent="." instance=ExtResource("29_oijpx")]
+position = Vector2(575, 323)
+script = ExtResource("30_ge13j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_5vilr")
+volume_db = -12.235
+pitch_scale = 0.83
+
+[node name="VerVideo" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 550.0
+offset_right = 73.0
+offset_bottom = 588.0
+text = "video"
+script = ExtResource("32_8jt1v")
+
+[node name="inicio" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 597.0
+offset_right = 75.0
+offset_bottom = 633.0
+text = "inicio"
+
+[node name="PantallaPerder" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("35_uo4og")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PantallaPerder"]
+offset_left = 470.0
+offset_top = 80.0
+offset_right = 1013.0
+offset_bottom = 190.0
+scale = Vector2(0.785368, 0.758043)
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="PantallaPerder/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="PantallaPerder/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+
+[node name="estrella3" type="TextureRect" parent="PantallaPerder/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaPerder"]
+offset_left = 483.0
+offset_top = 34.0
+offset_right = 720.0
+offset_bottom = 76.0
+
+[node name="LabelFinal" type="Label" parent="PantallaPerder/HBoxContainer"]
+layout_mode = 2
+text = "Score Final: "
+label_settings = SubResource("LabelSettings_a00f5")
+
+[node name="FinalScore" type="Label" parent="PantallaPerder/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_v2qmt")
+
+[node name="Restart" type="Button" parent="PantallaPerder"]
+offset_left = 223.0
+offset_top = 499.0
+offset_right = 360.0
+offset_bottom = 530.0
+size_flags_vertical = 4
+text = "VOLVER A JUGAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaPerder"]
+offset_left = 827.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 528.0
+size_flags_vertical = 0
+text = "SALIR
+"
+alignment = 0
+
+[node name="Timbre" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_5sjxx")
+volume_db = 18.0
+pitch_scale = 1.38
+
+[node name="Soltar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_cmbsn")
+volume_db = 24.0
+
+[node name="Agarrar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("37_6qysn")
+volume_db = 24.0
+
+[node name="PantallaGanar" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("40_tq8pq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaGanar"]
+offset_left = 533.0
+offset_top = 43.0
+offset_right = 757.0
+offset_bottom = 85.0
+
+[node name="LabelFinal" type="Label" parent="PantallaGanar/HBoxContainer"]
+layout_mode = 2
+text = "Ronda: "
+label_settings = SubResource("LabelSettings_rc768")
+
+[node name="FinalScore" type="Label" parent="PantallaGanar/HBoxContainer"]
+layout_mode = 2
+text = "0
+"
+label_settings = SubResource("LabelSettings_52mrh")
+
+[node name="Restart" type="Button" parent="PantallaGanar"]
+offset_left = 223.0
+offset_top = 499.0
+offset_right = 360.0
+offset_bottom = 530.0
+size_flags_vertical = 4
+text = "VOLVER A JUGAR
+"
+alignment = 0
+
+[node name="LEFT" type="Button" parent="PantallaGanar"]
+offset_left = 827.0
+offset_top = 497.0
+offset_right = 930.0
+offset_bottom = 528.0
+size_flags_vertical = 0
+text = "CONTINUAR
+"
+alignment = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PantallaGanar"]
+offset_left = 470.0
+offset_top = 80.0
+offset_right = 1013.0
+offset_bottom = 190.0
+scale = Vector2(0.785368, 0.758043)
+size_flags_horizontal = 4
+
+[node name="estrella1" type="TextureRect" parent="PantallaGanar/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="estrella2" type="TextureRect" parent="PantallaGanar/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+
+[node name="estrella3" type="TextureRect" parent="PantallaGanar/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("5_dadgm")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -429.0
+offset_top = 22.0
+offset_right = -379.0
+offset_bottom = 44.0
+grow_horizontal = 0
+scale = Vector2(3, 3)
+theme = SubResource("Theme_61pkp")
+alignment = 1
+
+[node name="Sprite2D4" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(24.3333, 10.3333)
+scale = Vector2(0.186355, 0.165577)
+texture = ExtResource("41_4iwve")
+
+[node name="Música" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("41_csryd")
+texture_pressed = ExtResource("42_6t2ss")
+
+[node name="FX" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("43_0i7c2")
+texture_pressed = ExtResource("44_506oi")
+
+[connection signal="perderEstrella" from="." to="Puntos" method="_on_nivel_3_perder_estrella"]
+[connection signal="perderEstrella" from="." to="PantallaPerder" method="_on_nivel_3_perder_estrella"]
+[connection signal="perderEstrella" from="." to="PantallaGanar" method="_on_nivel_3_perder_estrella"]
+[connection signal="orden_actualizada" from="nodo_control" to="division2" method="_on_nodo_control_orden_actualizada"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="nodo_control" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="piña" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="albahaca" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="peperoni" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="anchoa" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="champiñon" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="aceituna" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="cebollin" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="pimenton" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="queso" method="_on_timbre_evaluar_timbre"]
+[connection signal="evaluarTIMBRE" from="TIMBRE" to="division2" method="_on_timbre_evaluar_timbre"]
+[connection signal="mouse_entered" from="TIMBRE" to="TIMBRE" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TIMBRE" to="TIMBRE" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="piña" to="piña" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="piña" to="piña" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="albahaca" to="albahaca" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="albahaca" to="albahaca" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="peperoni" to="peperoni" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="peperoni" to="peperoni" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="anchoa" to="anchoa" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="anchoa" to="anchoa" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="champiñon" to="champiñon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="champiñon" to="champiñon" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="aceituna" to="aceituna" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="aceituna" to="aceituna" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="cebollin" to="cebollin" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="cebollin" to="cebollin" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="pimenton" to="pimenton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pimenton" to="pimenton" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="queso" to="queso" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="queso" to="queso" method="_on_mouse_exited"]
+[connection signal="area_entered" from="division2/Porcion1Wu" to="division2" method="_on_porcion_1_wu_area_entered"]
+[connection signal="area_entered" from="division2/Porcion1Wu" to="division2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="division2/Porcion1Wu" to="division2/Porcion1Wu" method="_on_area_entered"]
+[connection signal="area_exited" from="division2/Porcion1Wu" to="division2" method="_on_porcion_1_wu_area_exited"]
+[connection signal="area_entered" from="division2/Porcion2Wu" to="division2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="division2/Porcion2Wu" to="division2" method="_on_porcion_2_wu_area_entered"]
+[connection signal="area_entered" from="division2/Porcion2Wu" to="division2/Porcion2Wu" method="_on_area_entered"]
+[connection signal="area_exited" from="division2/Porcion2Wu" to="division2" method="_on_porcion_2_wu_area_exited"]
+[connection signal="area_entered" from="division2/Porcion3Wu" to="division2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="division2/Porcion3Wu" to="division2" method="_on_porcion_3_wu_area_entered"]
+[connection signal="area_entered" from="division2/Porcion3Wu" to="division2/Porcion3Wu" method="_on_area_entered"]
+[connection signal="area_exited" from="division2/Porcion3Wu" to="division2" method="_on_porcion_3_wu_area_exited"]
+[connection signal="area_entered" from="division2/Porcion4Wu" to="division2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="division2/Porcion4Wu" to="division2" method="_on_porcion_4_wu_area_entered"]
+[connection signal="area_entered" from="division2/Porcion4Wu" to="division2/Porcion4Wu" method="_on_area_entered"]
+[connection signal="area_exited" from="division2/Porcion4Wu" to="division2" method="_on_porcion_4_wu_area_exited"]
+[connection signal="area_entered" from="division2/Porcion5Wu" to="division2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="division2/Porcion5Wu" to="division2" method="_on_porcion_5_wu_area_entered"]
+[connection signal="area_entered" from="division2/Porcion5Wu" to="division2/Porcion5Wu" method="_on_area_entered"]
+[connection signal="area_exited" from="division2/Porcion5Wu" to="division2" method="_on_porcion_5_wu_area_exited"]
+[connection signal="area_entered" from="division2/Completa2" to="division2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="division2/Completa2" to="division2" method="_on_porcion_5_wu_area_entered"]
+[connection signal="area_entered" from="division2/Completa2" to="division2/Completa2" method="_on_area_entered"]
+[connection signal="area_exited" from="division2/Completa2" to="division2" method="_on_completa_2_area_exited"]
+[connection signal="area_entered" from="aceituna2" to="division2" method="_on_aceituna_2_area_entered"]
+[connection signal="pressed" from="VerVideo" to="VerVideo" method="_on_pressed"]
+[connection signal="pressed" from="inicio" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="PantallaPerder/Restart" to="PantallaPerder" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaPerder/LEFT" to="PantallaPerder" method="_on_left_pressed"]
+[connection signal="pressed" from="PantallaGanar/Restart" to="PantallaGanar" method="_on_restart_pressed"]
+[connection signal="pressed" from="PantallaGanar/LEFT" to="PantallaGanar" method="_on_left_pressed"]
+[connection signal="pressed" from="HBoxContainer/Música" to="." method="_on_música_pressed"]

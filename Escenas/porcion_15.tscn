@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd8duvdkqokv6"]
+
+[ext_resource type="Script" path="res://scrips/porciónPizza.gd" id="1_dntc2"]
+[ext_resource type="Texture2D" uid="uid://cafu3r3njb1or" path="res://MARIA JOSÉ ASSETS/1ACTIVIDAD/8/3octavo.png" id="1_htjav"]
+
+[node name="porcion_15" type="Area2D" groups=["porciones"]]
+position = Vector2(282, 321)
+script = ExtResource("1_dntc2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(19.5, -11.5)
+scale = Vector2(1.98437, 2.02439)
+texture = ExtResource("1_htjav")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(41.9906, 64.1393)
+rotation = 0.0675084
+scale = Vector2(1.4925, 2.19828)
+polygon = PackedVector2Array(-60.8967, -11.4022, -57.095, -33.9177, -35.6413, -54.5079, -7.00344, -36.673, 27.2536, -16.3605)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
