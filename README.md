@@ -36,19 +36,24 @@ It was developed in **Godot Engine** using **GDScript**, a language similar to P
 | Home                   | ![](Captures/home.PNG)                   |
 | Achievements           | ![](Captures/logros.PNG)                 |
 | Credits                | ![](Captures/creditos.PNG)               |
+| Empty Profile          | ![](Captures/perfilvacio.PNG)            |
 | Create Profile         | ![](Captures/creaciondelperfil.PNG)    |
 | Existing Profile       | ![](Captures/perfilexistente.PNG)       |
 | Cinematic 1            | ![](Captures/cinematica1.PNG)           |
 | Explanation Video 1    | ![](Captures/videoexplicativo1.PNG)    |
+| Instruction Popup 1 (Level 1)      | ![](Captures/popup1.PNG)     |
 | Level 1                | ![](Captures/nivel1.PNG)                |
 | Victory Screen         | ![](Captures/pantallavictoria1.PNG)    |
 | Defeat Screen          | ![](Captures/pantallamuerte.PNG)        |
 | Mini-game 1            | ![](Captures/minijuego1.PNG)             |
 | Explanation Video 2    | ![](Captures/videoexplicativo2.PNG)    |
+| Instruction Popup 2 (Level 2)      | ![](Captures/popup2.PNG)     |
 | Level 2                | ![](Captures/nivel2.PNG)                |
 | Mini-game 2            | ![](Captures/minijuego2.PNG)             |
 | Explanation Video 3    | ![](Captures/videoexplicativo3.PNG)    |
-| Level 3                | ![](Captures/nivel3.PNG)![](Captures/nivel3.1.PNG)  |
+| Instruction Popup 3 (Level 3)      | ![](Captures/popup3.PNG)    | 
+| Level 3                | ![](Captures/nivel3.PNG)               |
+| Level 3.1 (preview of Level 3)     | ![](Captures/nivel3.1.PNG)     |
 | Cinematic 2            | ![](Captures/cinematica2.PNG)           |
 
 ---
